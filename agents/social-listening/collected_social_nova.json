@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-03-13T23:22:08.996498",
+  "collected_at": "2026-03-14T00:36:37.995009",
   "source_count": 2,
   "post_count": 20,
   "sources": [
@@ -7,53 +7,12 @@
     "reddit_r/india"
   ],
   "sentiment_summary": {
-    "positive": 5.0,
-    "neutral": 85.0,
-    "negative": 10.0,
+    "positive": 0.0,
+    "neutral": 100.0,
+    "negative": 0.0,
     "total_posts": 20
   },
-  "trending_topics": [
-    {
-      "topic": "safety",
-      "count": 2
-    },
-    {
-      "topic": "South Indian food",
-      "count": 1
-    },
-    {
-      "topic": "Madras cafe",
-      "count": 1
-    },
-    {
-      "topic": "best dosa",
-      "count": 1
-    },
-    {
-      "topic": "commute",
-      "count": 1
-    },
-    {
-      "topic": "rent",
-      "count": 1
-    },
-    {
-      "topic": "Mumbai",
-      "count": 1
-    },
-    {
-      "topic": "uncomfortable experience",
-      "count": 1
-    },
-    {
-      "topic": "auto driver",
-      "count": 1
-    },
-    {
-      "topic": "food suggestions",
-      "count": 1
-    }
-  ],
+  "trending_topics": [],
   "posts": [
     {
       "id": "1rsrvod",
@@ -67,18 +26,14 @@
       "engagement": {
         "upvotes": 1,
         "downvotes": 0,
-        "comments": 2,
+        "comments": 3,
         "score": 1
       },
       "subreddit": "mumbai",
       "flair": "Discussion",
-      "sentiment": "positive",
-      "topics": [
-        "South Indian food",
-        "Madras cafe",
-        "best dosa"
-      ],
-      "summary": "The post recommends authentic South Indian food spots in Mumbai and asks for opinions on the best dishes."
+      "sentiment": "neutral",
+      "topics": [],
+      "summary": "South Indian food in mumbai"
     },
     {
       "id": "1rsqzmu",
@@ -92,18 +47,14 @@
       "engagement": {
         "upvotes": 1,
         "downvotes": 0,
-        "comments": 3,
+        "comments": 11,
         "score": 1
       },
       "subreddit": "mumbai",
       "flair": "AskMumbai",
       "sentiment": "neutral",
-      "topics": [
-        "commute",
-        "rent",
-        "Mumbai"
-      ],
-      "summary": "A new resident is seeking advice on the practicality of commuting from Kanjur Marg to Parel for work."
+      "topics": [],
+      "summary": "New to Mumbai — can I rely on local trains for Kanjur Marg to Parel commute?"
     },
     {
       "id": "1rsqw3x",
@@ -115,20 +66,16 @@
       "created_utc": 1773416748.0,
       "timestamp": "2026-03-13T21:15:48",
       "engagement": {
-        "upvotes": 7,
+        "upvotes": 12,
         "downvotes": 0,
-        "comments": 10,
-        "score": 7
+        "comments": 14,
+        "score": 12
       },
       "subreddit": "mumbai",
       "flair": "Discussion",
-      "sentiment": "negative",
-      "topics": [
-        "safety",
-        "uncomfortable experience",
-        "auto driver"
-      ],
-      "summary": "A 21-year-old man shares an uncomfortable experience with an auto driver in Mumbai, highlighting issues of safety and inappropriate behavior."
+      "sentiment": "neutral",
+      "topics": [],
+      "summary": "Mens too are not safe nowadays"
     },
     {
       "id": "1rsqw1o",
@@ -148,12 +95,8 @@
       "subreddit": "mumbai",
       "flair": "AskMumbai",
       "sentiment": "neutral",
-      "topics": [
-        "food suggestions",
-        "Goregaon",
-        "hygiene"
-      ],
-      "summary": "The post asks for budget-friendly food suggestions in Goregaon while expressing concern about hygiene."
+      "topics": [],
+      "summary": "Any good food suggestions in goregaon (W)"
     },
     {
       "id": "1rsqr4n",
@@ -167,18 +110,14 @@
       "engagement": {
         "upvotes": 4,
         "downvotes": 0,
-        "comments": 1,
+        "comments": 2,
         "score": 4
       },
       "subreddit": "mumbai",
       "flair": "General",
       "sentiment": "neutral",
-      "topics": [
-        "accommodation",
-        "Vile Parle",
-        "students"
-      ],
-      "summary": "The post is about a fully furnished 3BHK flat available for rent in Vile Parle, ideal for female students starting in May."
+      "topics": [],
+      "summary": "Looking for a female replacement in Vile Parle"
     },
     {
       "id": "1rspp63",
@@ -192,18 +131,14 @@
       "engagement": {
         "upvotes": 1,
         "downvotes": 0,
-        "comments": 1,
+        "comments": 2,
         "score": 1
       },
       "subreddit": "mumbai",
       "flair": "General",
       "sentiment": "neutral",
-      "topics": [
-        "pickleball",
-        "tennis",
-        "coaching"
-      ],
-      "summary": "A 25-year-old male is seeking recommendations for pickleball or tennis coaching in Andheri and Vile Parle with a budget of 4-6k monthly."
+      "topics": [],
+      "summary": "Pickleball/ tennis monthly"
     },
     {
       "id": "1rspnvr",
@@ -217,18 +152,14 @@
       "engagement": {
         "upvotes": 0,
         "downvotes": 0,
-        "comments": 0,
+        "comments": 1,
         "score": 0
       },
       "subreddit": "mumbai",
       "flair": "Discussion",
       "sentiment": "neutral",
-      "topics": [
-        "sharing taxis",
-        "buses",
-        "travel"
-      ],
-      "summary": "The post observes an increase in shared taxis on the Churchgate to Gateway of India route, noting that people are choosing them over buses."
+      "topics": [],
+      "summary": "Noticed more sharing taxis than buses from Churchgate to Gateway of India"
     },
     {
       "id": "1rsphf2",
@@ -248,12 +179,8 @@
       "subreddit": "mumbai",
       "flair": "AskMumbai",
       "sentiment": "neutral",
-      "topics": [
-        "night exploration",
-        "safety",
-        "experiences"
-      ],
-      "summary": "A new resident in Mumbai is considering a late-night exploration on their scooter, seeking advice on safety and potential destinations."
+      "topics": [],
+      "summary": "Roam late at night on activa from andheri"
     },
     {
       "id": "1rspd0z",
@@ -267,18 +194,14 @@
       "engagement": {
         "upvotes": 0,
         "downvotes": 0,
-        "comments": 4,
+        "comments": 8,
         "score": 0
       },
       "subreddit": "mumbai",
       "flair": "Discussion",
-      "sentiment": "negative",
-      "topics": [
-        "roommates",
-        "unfurnished flat",
-        "unhygienic"
-      ],
-      "summary": "A student expresses frustration with their unhygienic and disrespectful flatmates and the difficulties of moving into an unfurnished flat in Mumbai."
+      "sentiment": "neutral",
+      "topics": [],
+      "summary": "Moved to Mumbai for undergrad and my flatmates made my life hell. How do you guys even find good roommates???"
     },
     {
       "id": "1rspcco",
@@ -290,20 +213,16 @@
       "created_utc": 1773413270.0,
       "timestamp": "2026-03-13T20:17:50",
       "engagement": {
-        "upvotes": 32,
+        "upvotes": 46,
         "downvotes": 0,
-        "comments": 9,
-        "score": 32
+        "comments": 15,
+        "score": 46
       },
       "subreddit": "mumbai",
       "flair": "General",
       "sentiment": "neutral",
-      "topics": [
-        "reservation",
-        "Americano",
-        "Italian restaurant"
-      ],
-      "summary": "The user is seeking help to make a reservation at Americano, an Italian restaurant in Fort, Mumbai, as they couldn't find any reservation options online or connect via the provided mobile numbers."
+      "topics": [],
+      "summary": "Table at Americano"
     },
     {
       "id": "1rshcgc",
@@ -315,10 +234,10 @@
       "created_utc": 1773389083.0,
       "timestamp": "2026-03-13T13:34:43",
       "engagement": {
-        "upvotes": 13,
+        "upvotes": 14,
         "downvotes": 0,
         "comments": 1,
-        "score": 13
+        "score": 14
       },
       "subreddit": "india",
       "flair": "Crime",
@@ -336,10 +255,10 @@
       "created_utc": 1773285043.0,
       "timestamp": "2026-03-12T08:40:43",
       "engagement": {
-        "upvotes": 8,
+        "upvotes": 5,
         "downvotes": 0,
         "comments": 1,
-        "score": 8
+        "score": 5
       },
       "subreddit": "india",
       "flair": "Politics",
@@ -357,10 +276,10 @@
       "created_utc": 1773266261.0,
       "timestamp": "2026-03-12T03:27:41",
       "engagement": {
-        "upvotes": 2,
+        "upvotes": 3,
         "downvotes": 0,
         "comments": 6,
-        "score": 2
+        "score": 3
       },
       "subreddit": "india",
       "flair": "Careers",
@@ -378,10 +297,10 @@
       "created_utc": 1773237395.0,
       "timestamp": "2026-03-11T19:26:35",
       "engagement": {
-        "upvotes": 8,
+        "upvotes": 10,
         "downvotes": 0,
         "comments": 0,
-        "score": 8
+        "score": 10
       },
       "subreddit": "india",
       "flair": "Crime",
@@ -399,10 +318,10 @@
       "created_utc": 1773078123.0,
       "timestamp": "2026-03-09T23:12:03",
       "engagement": {
-        "upvotes": 265,
+        "upvotes": 263,
         "downvotes": 0,
         "comments": 38,
-        "score": 265
+        "score": 263
       },
       "subreddit": "india",
       "flair": "Politics",
@@ -420,10 +339,10 @@
       "created_utc": 1772898617.0,
       "timestamp": "2026-03-07T21:20:17",
       "engagement": {
-        "upvotes": 1247,
+        "upvotes": 1242,
         "downvotes": 0,
         "comments": 81,
-        "score": 1247
+        "score": 1242
       },
       "subreddit": "india",
       "flair": "Law &amp; Courts",
@@ -504,10 +423,10 @@
       "created_utc": 1772692190.0,
       "timestamp": "2026-03-05T11:59:50",
       "engagement": {
-        "upvotes": 213,
+        "upvotes": 214,
         "downvotes": 0,
         "comments": 4,
-        "score": 213
+        "score": 214
       },
       "subreddit": "india",
       "flair": "Politics",
@@ -517,7 +436,7 @@
     }
   ],
   "cost_tracking": {
-    "tokens_used": 2500,
-    "estimated_cost": 0.0020000000000000005
+    "tokens_used": 0,
+    "estimated_cost": 0.0
   }
 }

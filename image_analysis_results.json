@@ -1,0 +1,26 @@
+[
+  {
+    "image_path": "sample_images\\construction_site_1.jpg",
+    "analysis": "### Construction Site Analysis\n\n1. **Type of Construction**:\n   - The image depicts a construction site, but the specific type (building, road, infrastructure, etc.) is not clearly identifiable from the image alone. The site appears to be a general construction area with a focus on safety.\n\n2. **Visible Signage**:\n   - There is a yellow sign at the bottom left of the image that reads \"SAFETY FIRST.\" However, there are no visible permits or detailed project information signs.\n\n3. **Safety Concerns**:\n   - The presence of the \"SAFETY FIRST\" sign indicates an emphasis on safety. However, the image does not show specific safety measures in place, such as barriers, protective gear, or safety officers.\n\n4. **Project Scale**:\n   - The scale of the project is difficult to determine from the image. It appears to be a medium-sized construction site, but without more context, this is an estimate.\n\n5. **Visible Violations or Issues**:\n   - No immediate violations are apparent from the image. However, the lack of detailed signage and visible safety measures could be a concern if not addressed properly on-site.\n\n### Conclusion\nThe image shows a construction site with an emphasis on safety, as indicated by the \"SAFETY FIRST\" sign. However, more detailed information and safety measures are needed to fully assess the site's compliance and safety standards.",
+    "analyzed_at": "2026-03-11T22:15:43.904181",
+    "analyzed_by": "Amazon Nova 2 Omni",
+    "tokens_used": 2028,
+    "cost": 0.0024138
+  },
+  {
+    "image_path": "sample_images\\permit_document_1.jpg",
+    "analysis": "```markdown\n**Permit Number:** BMC/2026/12345  \n**Project Name:** Green City Phase 3  \n**Location:** Andheri West, Mumbai  \n**Permit Type:** Construction  \n**Issue Date:** March 1, 2026  \n**Expiry Date:** March 1, 2028  \n**Issuing Authority:** BMC Mumbai  \n**Special Conditions:**  \n- Safety barriers required  \n- Working hours: 8 AM - 6 PM  \n- Noise limits apply  \n**Status:** Approved\n```",
+    "analyzed_at": "2026-03-11T22:15:47.256157",
+    "analyzed_by": "Amazon Nova 2 Omni",
+    "tokens_used": 1759,
+    "cost": 0.0015467999999999999
+  },
+  {
+    "image_path": "sample_images\\safety_violation_1.jpg",
+    "analysis": "### Construction Site Analysis for Mumbai Civic Monitoring\n\n#### 1. Type of Construction\n- **Visible Construction**: The image shows a construction site with a large rectangular structure, likely a building foundation or a retaining wall. \n\n#### 2. Visible Signage\n- **Signage**: There is no visible signage indicating permits, project details, or safety instructions.\n\n#### 3. Safety Concerns\n- **Safety Barriers**: There are no barriers around the pit, which poses a significant safety risk.\n- **Safety Signage**: There is no safety signage present to warn workers or passersby of potential hazards.\n\n#### 4. Project Scale\n- **Estimated Scale**: The project appears to be medium-scale, given the size of the foundation or wall being constructed.\n\n#### 5. Visible Violations or Issues\n- **Violations**: \n  - **No Barriers Around Pit**: The absence of barriers around the pit is a major safety violation.\n  - **No Safety Signage**: The lack of safety signage is another critical violation.\n\n### Summary\nThe construction site shows a medium-scale project with significant safety violations, including the absence of barriers around the pit and lack of safety signage. Immediate action is required to address these issues to ensure worker and public safety.",
+    "analyzed_at": "2026-03-11T22:15:50.015373",
+    "analyzed_by": "Amazon Nova 2 Omni",
+    "tokens_used": 2001,
+    "cost": 0.0022842
+  }
+]

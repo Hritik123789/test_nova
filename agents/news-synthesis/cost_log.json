@@ -79,5 +79,32 @@
     "relevant_articles": 2,
     "tokens_used": 2583,
     "estimated_cost": 0.0014327
+  },
+  {
+    "timestamp": "2026-03-14T00:20:45.794992",
+    "operation": "news_analysis",
+    "model": "Amazon Nova 2 Lite",
+    "total_articles": 10,
+    "relevant_articles": 0,
+    "tokens_used": 0,
+    "estimated_cost": 0.0
+  },
+  {
+    "timestamp": "2026-03-14T00:23:01.644602",
+    "operation": "news_analysis",
+    "model": "Amazon Nova 2 Lite",
+    "total_articles": 10,
+    "relevant_articles": 0,
+    "tokens_used": 0,
+    "estimated_cost": 0.0
+  },
+  {
+    "timestamp": "2026-03-14T00:26:10.084973",
+    "operation": "news_analysis",
+    "model": "Amazon Nova 2 Lite",
+    "total_articles": 10,
+    "relevant_articles": 0,
+    "tokens_used": 0,
+    "estimated_cost": 0.0
   }
 ]

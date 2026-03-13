@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-13T23:22:12.778183",
+  "generated_at": "2026-03-14T00:36:45.213780",
   "user_location": {
     "latitude": 19.076,
     "longitude": 72.8777,
@@ -16,9 +16,8 @@
       "priority": "high",
       "source": "news",
       "url": "https://www.hindustantimes.com/cities/mumbai-news/metro-3-last-mile-bus-plan-hits-a-speed-bump-as-services-halved-after-failing-to-attract-enough-riders-101772909399795.html",
-      "timestamp": "2026-03-13T23:22:11.086976",
-      "priority_score": 10,
-      "priority_reason": "Safety concern"
+      "timestamp": "2026-03-14T00:36:44.563756",
+      "priority_score": 9
     },
     {
       "alert_id": "safety-news-20",
@@ -29,9 +28,8 @@
       "priority": "high",
       "source": "news",
       "url": "https://www.hindustantimes.com/cities/mumbai-news/trafficchoked-ghodbunder-road-stretch-handed-over-to-thane-civic-body-for-maintenance-101772909039714.html",
-      "timestamp": "2026-03-13T23:22:11.086976",
-      "priority_score": 10,
-      "priority_reason": "Safety concern"
+      "timestamp": "2026-03-14T00:36:44.563756",
+      "priority_score": 9
     },
     {
       "alert_id": "safety-news-28",
@@ -42,28 +40,19 @@
       "priority": "high",
       "source": "news",
       "url": "https://www.hindustantimes.com/cities/mumbai-news/residents-activists-march-in-kandivali-to-oppose-mangrove-cutting-for-versova-dahisar-coastal-road-101772826932856.html",
-      "timestamp": "2026-03-13T23:22:11.086976",
-      "priority_score": 10,
-      "priority_reason": "Safety concern"
+      "timestamp": "2026-03-14T00:36:44.563756",
+      "priority_score": 9
     },
     {
-      "alert_id": "social-1rp70ih",
-      "type": "community",
-      "title": "Trending: Shortage of LPG cooking gas engulfs Mumbai, supply of commer...",
-      "message": "Shortage of LPG cooking gas engulfs Mumbai, supply of commercial cylinders halted, say dealers | Mumbai News - The Times of India",
+      "alert_id": "permit-commercial-3",
+      "type": "new_business",
+      "title": "New Commercial Activity",
+      "message": "LAKEPLACE MAFIA AND THE OLD LADY GANG GANG TIP#19 TOPOLO RESTAURANT",
       "location": "Mumbai",
-      "priority": "medium",
-      "source": "social",
-      "url": "https://reddit.com/r/india/comments/1rp70ih/shortage_of_lpg_cooking_gas_engulfs_mumbai_supply/",
-      "timestamp": "2026-03-09T23:12:03",
-      "engagement": {
-        "upvotes": 251,
-        "comments": 38,
-        "score": 251
-      },
-      "sentiment": "neutral",
-      "priority_score": 7,
-      "priority_reason": "Community concern"
+      "priority": "low",
+      "source": "permit",
+      "timestamp": "2026-03-11T21:36:59.635169",
+      "priority_score": 6
     },
     {
       "alert_id": "permit-N/A",
@@ -82,8 +71,7 @@
         "url": "https://maharera.maharashtra.gov.in/projects-search-result?page=1",
         "data_source": "maharera_selenium"
       },
-      "priority_score": 6,
-      "priority_reason": "Development project"
+      "priority_score": 5
     },
     {
       "alert_id": "permit-N/A",
@@ -102,8 +90,7 @@
         "url": "https://maharera.maharashtra.gov.in/projects-search-result?page=1",
         "data_source": "maharera_selenium"
       },
-      "priority_score": 6,
-      "priority_reason": "Development project"
+      "priority_score": 5
     },
     {
       "alert_id": "permit-N/A",
@@ -122,20 +109,7 @@
         "url": "https://maharera.maharashtra.gov.in/projects-search-result?page=1",
         "data_source": "maharera_selenium"
       },
-      "priority_score": 6,
-      "priority_reason": "Development project"
-    },
-    {
-      "alert_id": "permit-commercial-3",
-      "type": "new_business",
-      "title": "New Commercial Activity",
-      "message": "LAKEPLACE MAFIA AND THE OLD LADY GANG GANG TIP#19 TOPOLO RESTAURANT",
-      "location": "Mumbai",
-      "priority": "low",
-      "source": "permit",
-      "timestamp": "2026-03-11T21:36:59.635169",
-      "priority_score": 5,
-      "priority_reason": "New business opening"
+      "priority_score": 5
     },
     {
       "alert_id": "social-1rqvoq2",
@@ -153,8 +127,25 @@
         "score": 88
       },
       "sentiment": "neutral",
-      "priority_score": 5,
-      "priority_reason": "Community opportunity"
+      "priority_score": 5
+    },
+    {
+      "alert_id": "social-1rp70ih",
+      "type": "community",
+      "title": "Trending: Shortage of LPG cooking gas engulfs Mumbai, supply of commer...",
+      "message": "Shortage of LPG cooking gas engulfs Mumbai, supply of commercial cylinders halted, say dealers | Mumbai News - The Times of India",
+      "location": "Mumbai",
+      "priority": "medium",
+      "source": "social",
+      "url": "https://reddit.com/r/india/comments/1rp70ih/shortage_of_lpg_cooking_gas_engulfs_mumbai_supply/",
+      "timestamp": "2026-03-09T23:12:03",
+      "engagement": {
+        "upvotes": 251,
+        "comments": 38,
+        "score": 251
+      },
+      "sentiment": "neutral",
+      "priority_score": 5
     },
     {
       "alert_id": "social-1rnda0d",
@@ -172,8 +163,7 @@
         "score": 1234
       },
       "sentiment": "neutral",
-      "priority_score": 5,
-      "priority_reason": "Community opportunity"
+      "priority_score": 5
     },
     {
       "alert_id": "social-1rmn6qw",
@@ -190,7 +180,8 @@
         "comments": 17,
         "score": 10
       },
-      "sentiment": "neutral"
+      "sentiment": "neutral",
+      "priority_score": 5
     },
     {
       "alert_id": "social-1rla9eu",
@@ -207,7 +198,8 @@
         "comments": 4,
         "score": 217
       },
-      "sentiment": "neutral"
+      "sentiment": "neutral",
+      "priority_score": 5
     },
     {
       "alert_id": "social-1rik319",
@@ -224,11 +216,12 @@
         "comments": 11,
         "score": 57
       },
-      "sentiment": "neutral"
+      "sentiment": "neutral",
+      "priority_score": 5
     }
   ],
   "metadata": {
-    "tokens_used": 735,
-    "estimated_cost": 8.208e-05
+    "tokens_used": 0,
+    "estimated_cost": 0.0
   }
 }

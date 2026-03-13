@@ -201,29 +201,17 @@ ACTION: [one of: Redevelopment, New Construction, Infrastructure Project, Road W
     
     def log_cost(self, num_investigations: int):
         """Log cost for tracking"""
-        log_entry = {
-            'timestamp': datetime.now().isoformat(),
-            'operation': 'bridge_processing',
-            'model': 'Amazon Nova 2 Lite',
-            'investigations': num_investigations,
-            'tokens_used': self.tokens_used,
-            'estimated_cost': self.estimated_cost
-        }
-        
-        try:
-            log_file = 'cost_log.json'
-            if os.path.exists(log_file):
-                with open(log_file, 'r') as f:
-                    logs = json.load(f)
-            else:
-                logs = []
-            
-            logs.append(log_entry)
-            
-            with open(log_file, 'w') as f:
-                json.dump(logs, f, indent=2)
-        except Exception as e:
-            print(f"⚠️  Could not log cost: {str(e)}")
+        # Add parent directory to path for utils import
+        sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        from utils import log_cost
+        log_cost(
+            agent_name='bridge_processing',
+            tokens_used=self.tokens_used,
+            estimated_cost=self.estimated_cost,
+            model='Amazon Nova 2 Lite',
+            operation='bridge_processing',
+            investigations=num_investigations
+        )
 
 
 def main():

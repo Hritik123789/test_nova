@@ -1,12 +1,12 @@
 {
-  "briefing_id": "morning-20260313-232213",
+  "briefing_id": "morning-20260314-003645",
   "user_location": {
     "latitude": 19.076,
     "longitude": 72.8777,
     "name": "Mumbai"
   },
-  "generated_at": "2026-03-13T23:22:13.697048",
-  "text_content": "**Good morning, Mumbai!**\n\nI hope you're having a great start to your day. It's Friday, March 13, 2026, and here's your quick briefing for the day.\n\nFirst up, let's talk about the weather. It looks like a pleasant day with partly cloudy skies and a comfortable temperature around 28 degrees Celsius. Perfect for those weekend plans you've been thinking about!\n\nNow, onto the news. Unfortunately, there are no major headlines today. But that's okay, because we don't have any permit investigations going on either. It's a quiet day in that sense, which is always a good thing.\n\nLastly, let's check on any permits nearby. There aren't any new permits in your area, so you can enjoy your morning without any disruptions.\n\nOn a positive note, I hope you have a fantastic day filled with productivity and a bit of relaxation. If you're heading out, remember to stay safe and enjoy the beautiful weather. Have a great day, Mumbai!",
+  "generated_at": "2026-03-14T00:36:45.200736",
+  "text_content": "Good morning! Here's your Mumbai briefing for Saturday, March 14.\n\n\n\nHave a great day!",
   "sections": [
     {
       "type": "news",
@@ -19,5 +19,5 @@
       "priority": "low"
     }
   ],
-  "duration_estimate_seconds": 63.2
+  "duration_estimate_seconds": 5.6000000000000005
 }

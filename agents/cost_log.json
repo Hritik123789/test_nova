@@ -1,467 +1,118 @@
 [
   {
-    "timestamp": "2026-03-10T23:51:56.317485",
-    "operation": "bridge_processing",
+    "agent": "community_pulse",
+    "timestamp": "2026-03-14T00:33:55.998027",
     "model": "Amazon Nova 2 Lite",
-    "investigations": 1,
-    "tokens_used": 117,
-    "estimated_cost": 5.929999999999999e-05
+    "operation": "topic_analysis",
+    "tokens_used": 0,
+    "estimated_cost": 0.0
   },
   {
-    "timestamp": "2026-03-10T23:51:58.931641",
-    "operation": "voice_briefing",
-    "model": "Amazon Nova 2 Sonic (text input)",
-    "tokens_used": 556,
-    "estimated_cost": 6.288000000000001e-05
-  },
-  {
-    "timestamp": "2026-03-11T21:13:37.446150",
-    "operation": "permit_monitoring",
+    "agent": "smart_alerts",
+    "timestamp": "2026-03-14T00:33:55.998027",
     "model": "Amazon Nova 2 Lite",
-    "events_collected": 6,
-    "events_normalized": 5,
-    "tokens_used": 1500,
-    "estimated_cost": 0.001
-  },
-  {
-    "timestamp": "2026-03-11T21:43:30.208595",
-    "operation": "social_listening",
-    "model": "Amazon Nova 2 Lite",
-    "posts_collected": 20,
-    "posts_analyzed": 10,
-    "tokens_used": 2500,
-    "estimated_cost": 0.002
-  },
-  {
-    "timestamp": "2026-03-11T21:54:42.426997",
-    "operation": "image_analysis",
-    "model": "Amazon Nova 2 Omni (Nova Pro)",
-    "images_analyzed": 3,
-    "tokens_used": 5846,
-    "estimated_cost": 0.0065
+    "operation": "alert_prioritization",
+    "tokens_used": 0,
+    "estimated_cost": 0.0
   },
   {
     "agent": "safety_intelligence",
-    "timestamp": "2026-03-11T22:28:56.479568",
+    "timestamp": "2026-03-14T00:33:55.998027",
     "model": "Amazon Nova 2 Lite",
     "operation": "alert_generation",
     "tokens_used": 0,
     "estimated_cost": 0.0
   },
   {
-    "agent": "safety_intelligence",
-    "timestamp": "2026-03-11T22:36:15.874852",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "alert_generation",
-    "tokens_used": 556,
-    "estimated_cost": 7.08e-05
-  },
-  {
     "agent": "investment_insights",
-    "timestamp": "2026-03-11T22:40:58.861321",
+    "timestamp": "2026-03-14T00:33:55.998027",
     "model": "Amazon Nova 2 Lite",
     "operation": "trend_analysis",
-    "tokens_used": 632,
-    "estimated_cost": 9.93e-05
+    "tokens_used": 0,
+    "estimated_cost": 0.0
   },
   {
-    "agent": "investment_insights",
-    "timestamp": "2026-03-11T22:47:10.883923",
+    "agent": "news_analysis",
+    "timestamp": "2026-03-14T00:35:34.678113",
     "model": "Amazon Nova 2 Lite",
-    "operation": "trend_analysis",
-    "tokens_used": 784,
-    "estimated_cost": 0.00011886000000000001
-  },
-  {
-    "agent": "investment_insights",
-    "timestamp": "2026-03-11T22:51:26.697938",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "trend_analysis",
-    "tokens_used": 805,
-    "estimated_cost": 0.0001239
-  },
-  {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-11T22:55:46.763044",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 817,
-    "estimated_cost": 0.00011976
-  },
-  {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-11T23:02:14.911163",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 997,
-    "estimated_cost": 0.00014586
-  },
-  {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-11T23:07:23.441367",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 999,
-    "estimated_cost": 0.000144
-  },
-  {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-11T23:11:41.770252",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 1017,
-    "estimated_cost": 0.0001368
-  },
-  {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-11T23:14:40.963116",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 934,
-    "estimated_cost": 0.00011688
-  },
-  {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-11T23:16:30.820610",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 1065,
-    "estimated_cost": 0.00013446
-  },
-  {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-11T23:18:34.442113",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 1051,
-    "estimated_cost": 0.0001311
-  },
-  {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-11T23:21:10.937162",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 1434,
-    "estimated_cost": 0.00017028
-  },
-  {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-11T23:23:57.312777",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 1495,
-    "estimated_cost": 0.00014802
-  },
-  {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-11T23:25:19.239836",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 1625,
-    "estimated_cost": 0.00017922
-  },
-  {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-11T23:27:57.969224",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 1502,
-    "estimated_cost": 0.0001497
-  },
-  {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-11T23:28:55.056376",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 1497,
-    "estimated_cost": 0.00014850000000000003
+    "operation": "news_analysis",
+    "tokens_used": 0,
+    "estimated_cost": 0.0,
+    "total_articles": 10,
+    "relevant_articles": 0
   },
   {
     "agent": "safety_intelligence",
-    "timestamp": "2026-03-11T23:36:16.906689",
+    "timestamp": "2026-03-14T00:35:46.202913",
     "model": "Amazon Nova 2 Lite",
     "operation": "alert_generation",
-    "tokens_used": 565,
-    "estimated_cost": 7.296e-05
-  },
-  {
-    "agent": "investment_insights",
-    "timestamp": "2026-03-11T23:36:27.509390",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "trend_analysis",
-    "tokens_used": 851,
-    "estimated_cost": 0.00013494
+    "tokens_used": 0,
+    "estimated_cost": 0.0
   },
   {
     "agent": "community_pulse",
-    "timestamp": "2026-03-11T23:36:31.094487",
+    "timestamp": "2026-03-14T00:35:46.234776",
     "model": "Amazon Nova 2 Lite",
     "operation": "topic_analysis",
-    "tokens_used": 1495,
-    "estimated_cost": 0.00014802
-  },
-  {
-    "agent": "safety_intelligence",
-    "timestamp": "2026-03-11T23:44:40.013971",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "alert_generation",
-    "tokens_used": 552,
-    "estimated_cost": 6.984e-05
-  },
-  {
-    "agent": "investment_insights",
-    "timestamp": "2026-03-11T23:44:45.699998",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "trend_analysis",
-    "tokens_used": 803,
-    "estimated_cost": 0.00012342
-  },
-  {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-11T23:44:49.452516",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 1492,
-    "estimated_cost": 0.0001473
-  },
-  {
-    "agent": "safety_intelligence",
-    "timestamp": "2026-03-11T23:51:37.400176",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "alert_generation",
-    "tokens_used": 579,
-    "estimated_cost": 7.632e-05
-  },
-  {
-    "agent": "investment_insights",
-    "timestamp": "2026-03-11T23:51:45.999576",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "trend_analysis",
-    "tokens_used": 788,
-    "estimated_cost": 0.00011982000000000001
-  },
-  {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-11T23:51:48.617485",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 1486,
-    "estimated_cost": 0.00014586000000000002
-  },
-  {
-    "agent": "safety_intelligence",
-    "timestamp": "2026-03-13T22:51:29.662466",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "alert_generation",
-    "tokens_used": 566,
-    "estimated_cost": 7.32e-05
-  },
-  {
-    "agent": "investment_insights",
-    "timestamp": "2026-03-13T22:51:33.061156",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "trend_analysis",
-    "tokens_used": 800,
-    "estimated_cost": 0.0001227
-  },
-  {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-13T22:51:36.051794",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 1508,
-    "estimated_cost": 0.00015114000000000002
-  },
-  {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-13T22:57:13.607035",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 1361,
-    "estimated_cost": 0.00013764000000000002
-  },
-  {
-    "agent": "investment_insights",
-    "timestamp": "2026-03-13T22:59:46.227365",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "trend_analysis",
-    "tokens_used": 824,
-    "estimated_cost": 0.00012846
-  },
-  {
-    "agent": "investment_insights",
-    "timestamp": "2026-03-13T23:00:30.486469",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "trend_analysis",
-    "tokens_used": 1057,
-    "estimated_cost": 0.0001608
+    "tokens_used": 0,
+    "estimated_cost": 0.0
   },
   {
     "agent": "smart_alerts",
-    "timestamp": "2026-03-13T23:04:20.096122",
+    "timestamp": "2026-03-14T00:35:46.278589",
     "model": "Amazon Nova 2 Lite",
     "operation": "alert_prioritization",
-    "tokens_used": 735,
-    "estimated_cost": 8.208e-05
-  },
-  {
-    "agent": "smart_alerts",
-    "timestamp": "2026-03-13T23:06:25.393352",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "alert_prioritization",
-    "tokens_used": 735,
-    "estimated_cost": 8.208e-05
-  },
-  {
-    "agent": "safety_intelligence",
-    "timestamp": "2026-03-13T23:06:28.784286",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "alert_generation",
-    "tokens_used": 569,
-    "estimated_cost": 7.392e-05
+    "tokens_used": 0,
+    "estimated_cost": 0.0
   },
   {
     "agent": "investment_insights",
-    "timestamp": "2026-03-13T23:06:32.742890",
+    "timestamp": "2026-03-14T00:35:46.304185",
     "model": "Amazon Nova 2 Lite",
     "operation": "trend_analysis",
-    "tokens_used": 1029,
-    "estimated_cost": 0.00015408000000000002
+    "tokens_used": 0,
+    "estimated_cost": 0.0
   },
   {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-13T23:06:35.593111",
+    "agent": "news_analysis",
+    "timestamp": "2026-03-14T00:36:34.340314",
     "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 1366,
-    "estimated_cost": 0.00013884
-  },
-  {
-    "agent": "smart_alerts",
-    "timestamp": "2026-03-13T23:13:14.022287",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "alert_prioritization",
-    "tokens_used": 735,
-    "estimated_cost": 8.208e-05
-  },
-  {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-13T23:13:14.436593",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 1367,
-    "estimated_cost": 0.00013908
+    "operation": "news_analysis",
+    "tokens_used": 0,
+    "estimated_cost": 0.0,
+    "total_articles": 10,
+    "relevant_articles": 0
   },
   {
     "agent": "safety_intelligence",
-    "timestamp": "2026-03-13T23:13:14.969085",
+    "timestamp": "2026-03-14T00:36:45.194252",
     "model": "Amazon Nova 2 Lite",
     "operation": "alert_generation",
-    "tokens_used": 565,
-    "estimated_cost": 7.296e-05
+    "tokens_used": 0,
+    "estimated_cost": 0.0
   },
   {
     "agent": "investment_insights",
-    "timestamp": "2026-03-13T23:13:16.473660",
+    "timestamp": "2026-03-14T00:36:45.199728",
     "model": "Amazon Nova 2 Lite",
     "operation": "trend_analysis",
-    "tokens_used": 1043,
-    "estimated_cost": 0.00015744
+    "tokens_used": 0,
+    "estimated_cost": 0.0
   },
   {
     "agent": "smart_alerts",
-    "timestamp": "2026-03-13T23:15:24.284496",
+    "timestamp": "2026-03-14T00:36:45.214779",
     "model": "Amazon Nova 2 Lite",
     "operation": "alert_prioritization",
-    "tokens_used": 735,
-    "estimated_cost": 8.208e-05
-  },
-  {
-    "agent": "safety_intelligence",
-    "timestamp": "2026-03-13T23:15:27.267418",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "alert_generation",
-    "tokens_used": 561,
-    "estimated_cost": 7.2e-05
-  },
-  {
-    "agent": "investment_insights",
-    "timestamp": "2026-03-13T23:15:32.021015",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "trend_analysis",
-    "tokens_used": 1053,
-    "estimated_cost": 0.00015984000000000001
+    "tokens_used": 0,
+    "estimated_cost": 0.0
   },
   {
     "agent": "community_pulse",
-    "timestamp": "2026-03-13T23:15:35.496442",
+    "timestamp": "2026-03-14T00:36:45.234872",
     "model": "Amazon Nova 2 Lite",
     "operation": "topic_analysis",
-    "tokens_used": 1371,
-    "estimated_cost": 0.00014004000000000002
-  },
-  {
-    "agent": "safety_intelligence",
-    "timestamp": "2026-03-13T23:21:42.922213",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "alert_generation",
-    "tokens_used": 564,
-    "estimated_cost": 7.272e-05
-  },
-  {
-    "agent": "smart_alerts",
-    "timestamp": "2026-03-13T23:21:43.119336",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "alert_prioritization",
-    "tokens_used": 735,
-    "estimated_cost": 8.208e-05
-  },
-  {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-13T23:21:43.424434",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 1368,
-    "estimated_cost": 0.00013932000000000001
-  },
-  {
-    "agent": "investment_insights",
-    "timestamp": "2026-03-13T23:21:45.017929",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "trend_analysis",
-    "tokens_used": 1074,
-    "estimated_cost": 0.00016488
-  },
-  {
-    "agent": "smart_alerts",
-    "timestamp": "2026-03-13T23:22:12.779184",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "alert_prioritization",
-    "tokens_used": 735,
-    "estimated_cost": 8.208e-05
-  },
-  {
-    "agent": "safety_intelligence",
-    "timestamp": "2026-03-13T23:22:13.552503",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "alert_generation",
-    "tokens_used": 573,
-    "estimated_cost": 7.488e-05
-  },
-  {
-    "agent": "community_pulse",
-    "timestamp": "2026-03-13T23:22:13.613014",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "topic_analysis",
-    "tokens_used": 1384,
-    "estimated_cost": 0.00014316
-  },
-  {
-    "agent": "investment_insights",
-    "timestamp": "2026-03-13T23:22:14.160549",
-    "model": "Amazon Nova 2 Lite",
-    "operation": "trend_analysis",
-    "tokens_used": 1108,
-    "estimated_cost": 0.00017304
+    "tokens_used": 0,
+    "estimated_cost": 0.0
   }
 ]

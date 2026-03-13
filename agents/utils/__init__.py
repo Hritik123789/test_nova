@@ -8,6 +8,7 @@ import json
 import os
 from datetime import datetime
 from typing import Dict, List, Any, Optional
+from filelock import FileLock
 
 
 # Base directory (agents folder)
@@ -119,10 +120,11 @@ def log_cost(
     tokens_used: int,
     estimated_cost: float,
     model: str = "Amazon Nova",
-    operation: str = "analysis"
+    operation: str = "analysis",
+    **extra_fields
 ):
     """
-    Log cost information to central cost log
+    Thread-safe cost logging to prevent concurrent write issues
     
     Args:
         agent_name: Name of the agent (e.g., 'social_listener')
@@ -130,6 +132,7 @@ def log_cost(
         estimated_cost: Estimated cost in USD
         model: Model name
         operation: Operation type
+        **extra_fields: Additional fields to include in log entry
     """
     log_entry = {
         "agent": agent_name,
@@ -137,23 +140,28 @@ def log_cost(
         "model": model,
         "operation": operation,
         "tokens_used": tokens_used,
-        "estimated_cost": estimated_cost
+        "estimated_cost": estimated_cost,
+        **extra_fields
     }
     
+    lock_file = COST_LOG_FILE + '.lock'
+    
     try:
-        # Load existing logs
-        if os.path.exists(COST_LOG_FILE):
-            with open(COST_LOG_FILE, 'r', encoding='utf-8') as f:
-                logs = json.load(f)
-        else:
-            logs = []
-        
-        # Append new entry
-        logs.append(log_entry)
-        
-        # Save updated logs
-        with open(COST_LOG_FILE, 'w', encoding='utf-8') as f:
-            json.dump(logs, f, indent=2)
+        # Use file lock to prevent concurrent writes
+        with FileLock(lock_file, timeout=10):
+            # Load existing logs
+            if os.path.exists(COST_LOG_FILE):
+                with open(COST_LOG_FILE, 'r', encoding='utf-8') as f:
+                    logs = json.load(f)
+            else:
+                logs = []
+            
+            # Append new entry
+            logs.append(log_entry)
+            
+            # Save updated logs
+            with open(COST_LOG_FILE, 'w', encoding='utf-8') as f:
+                json.dump(logs, f, indent=2)
         
         print(f"💰 Cost logged: ${estimated_cost:.6f}")
         

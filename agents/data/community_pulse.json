@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-13T23:22:13.612014",
+  "generated_at": "2026-03-14T00:36:45.233867",
   "target_area": "Mumbai",
   "basic_topics": {
     "top_social_topics": [
@@ -88,52 +88,40 @@
     "trending_topics": [
       {
         "topic": "airport_transport",
-        "trend_score": 10,
-        "category": "transport",
+        "trend_score": 9,
+        "category": "social",
         "sentiment": "neutral",
-        "description": "Frequent mentions (6) combined with high engagement (1316) suggest growing public concern about airport connectivity."
+        "description": "Frequently mentioned in community discussions"
       },
       {
         "topic": "metro_transport",
-        "trend_score": 0,
-        "category": "transport",
+        "trend_score": 8,
+        "category": "social",
         "sentiment": "neutral",
-        "description": "Mentioned 9 times, but with relatively low engagement (84), indicating a lower level of public interest or discussion."
+        "description": "Frequently mentioned in community discussions"
       }
     ],
     "community_concerns": [
       {
-        "concern": "airport connectivity",
-        "severity": "high",
-        "affected_areas": [
-          "Western Suburbs",
-          "Central Mumbai"
-        ],
-        "recommendation": "Implement real-time updates and improve communication regarding flight schedules and delays at Chhatrapati Shivaji Maharaj International Airport."
-      },
-      {
-        "concern": "metro reliability",
+        "concern": "General community discussions",
         "severity": "medium",
         "affected_areas": [
-          "Central Mumbai",
-          "Eastern Suburbs"
+          "Mumbai"
         ],
-        "recommendation": "Increase frequency of metro services and address delays to improve reliability and commuter satisfaction."
+        "recommendation": "Monitor ongoing discussions"
       }
     ],
     "overall_sentiment": {
       "mood": "neutral",
       "key_drivers": [
-        "airport_transport",
-        "metro_transport"
+        "Community engagement",
+        "Local discussions"
       ],
-      "notable_changes": [
-        "High engagement on airport transport issues and low engagement on metro transport"
-      ]
+      "notable_changes": []
     }
   },
   "metadata": {
-    "tokens_used": 1384,
-    "estimated_cost": 0.00014316
+    "tokens_used": 0,
+    "estimated_cost": 0.0
   }
 }

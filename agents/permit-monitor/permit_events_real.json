@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-03-13T23:22:10.421171",
+  "collected_at": "2026-03-14T00:36:43.844268",
   "source_count": 3,
   "event_count": 8,
   "sources": [
@@ -12,8 +12,8 @@
       "event_type": "real_estate_project",
       "source": "MahaRERA",
       "location": "Nagpur, Mumbai",
-      "timestamp": "2026-03-13T23:21:58.701165",
-      "description": "A new real estate project named GREEN CITY 3 by an unknown promoter is registered in Nagpur, Mumbai.",
+      "timestamp": "2026-03-14T00:36:37.014238",
+      "description": "GREEN CITY 3 - Unknown Promoter",
       "metadata": {
         "project_name": "GREEN CITY 3",
         "promoter": "Unknown Promoter",
@@ -21,15 +21,14 @@
         "registration_number": "N/A",
         "url": "https://maharera.maharashtra.gov.in/projects-search-result?page=1",
         "data_source": "maharera_selenium"
-      },
-      "category": "real_estate"
+      }
     },
     {
       "event_type": "real_estate_project",
       "source": "MahaRERA",
       "location": "Thane, Mumbai",
-      "timestamp": "2026-03-13T23:21:58.701165",
-      "description": "A new real estate project named UNNATHI WOODS PHASE VII A has been registered in Thane, Mumbai, with an unknown promoter.",
+      "timestamp": "2026-03-14T00:36:37.014238",
+      "description": "UNNATHI WOODS PHASE VII A - Unknown Promoter",
       "metadata": {
         "project_name": "UNNATHI WOODS PHASE VII A",
         "promoter": "Unknown Promoter",
@@ -37,15 +36,14 @@
         "registration_number": "N/A",
         "url": "https://maharera.maharashtra.gov.in/projects-search-result?page=1",
         "data_source": "maharera_selenium"
-      },
-      "category": "real_estate"
+      }
     },
     {
       "event_type": "real_estate_project",
       "source": "MahaRERA",
       "location": "Thane, Mumbai",
-      "timestamp": "2026-03-13T23:21:58.701165",
-      "description": "MAYFAIR VISHWARAJA, a real estate project in Thane, Mumbai, is promoted by an unknown entity, with details available on the MahaRERA website.",
+      "timestamp": "2026-03-14T00:36:37.014238",
+      "description": "MAYFAIR VISHWARAJA - Unknown Promoter",
       "metadata": {
         "project_name": "MAYFAIR VISHWARAJA",
         "promoter": "Unknown Promoter",
@@ -53,55 +51,52 @@
         "registration_number": "N/A",
         "url": "https://maharera.maharashtra.gov.in/projects-search-result?page=1",
         "data_source": "maharera_selenium"
-      },
-      "category": "real_estate"
+      }
     },
     {
       "event_type": "community_discussion",
       "source": "Reddit_r/mumbai",
       "location": "Mumbai",
-      "timestamp": "2026-03-13T23:22:03.374966",
-      "description": "A community discussion on Reddit about workplace toxicity in Mumbai's construction and development sector.",
+      "timestamp": "2026-03-14T00:36:40.735593",
+      "description": "Paul Mitchell owner's Balinese-style estate came on the market in Hawaii ($32.5 million)",
       "metadata": {
-        "url": "https://reddit.com/r/workplacetoxicity/comments/1rsu4kn/welcome_to_rworkplacetoxicity/",
-        "platform": "reddit",
-        "topic": "construction_development",
-        "upvotes": 1
-      },
-      "category": "real_estate"
-    },
-    {
-      "event_type": "community_discussion",
-      "source": "Reddit_r/mumbai",
-      "location": "Mumbai",
-      "timestamp": "2026-03-13T23:22:03.374966",
-      "description": "Residents of Mumbai, join the discussion about a unique abandoned hospital in the forest outside Berlin.",
-      "metadata": {
-        "url": "https://reddit.com/r/EuropeanCulture/comments/1rsu3v3/checkout_this_abandoned_hospital_in_the_forest/",
-        "platform": "reddit",
-        "topic": "construction_development",
-        "upvotes": 2
-      },
-      "category": "infrastructure"
-    },
-    {
-      "event_type": "community_discussion",
-      "source": "Reddit_r/mumbai",
-      "location": "Mumbai",
-      "timestamp": "2026-03-13T23:22:03.374966",
-      "description": "[L] Is there genuinely any kindness anymore in this world??",
-      "metadata": {
-        "url": "https://reddit.com/r/KindVoice/comments/1rsu3sb/l_is_there_genuinely_any_kindness_anymore_in_this/",
+        "url": "https://reddit.com/r/zillowgonewild/comments/1rswh4m/paul_mitchell_owners_balinesestyle_estate_came_on/",
         "platform": "reddit",
         "topic": "construction_development",
         "upvotes": 1
       }
     },
     {
+      "event_type": "community_discussion",
+      "source": "Reddit_r/mumbai",
+      "location": "Sion, Mumbai",
+      "timestamp": "2026-03-14T00:36:40.735593",
+      "description": "NotebookLM Cinematic Video Generator Just Made AI Video Creation Easy",
+      "metadata": {
+        "url": "https://reddit.com/r/AISEOInsider/comments/1rswfl9/notebooklm_cinematic_video_generator_just_made_ai/",
+        "platform": "reddit",
+        "topic": "construction_development",
+        "upvotes": 1
+      }
+    },
+    {
+      "event_type": "community_discussion",
+      "source": "Reddit_r/mumbai",
+      "location": "Sion, Mumbai",
+      "timestamp": "2026-03-14T00:36:40.735593",
+      "description": "👋Welcome to r/spoiledsurvivorcj - Introduce Yourself and Read First!",
+      "metadata": {
+        "url": "https://reddit.com/r/spoiledsurvivorcj/comments/1rswfk1/welcome_to_rspoiledsurvivorcj_introduce_yourself/",
+        "platform": "reddit",
+        "topic": "construction_development",
+        "upvotes": 2
+      }
+    },
+    {
       "event_type": "liquor_license",
       "source": "Maharashtra_Excise",
       "location": "Bandra West, Mumbai",
-      "timestamp": "2026-03-13T23:22:05.225348",
+      "timestamp": "2026-03-14T00:36:42.364499",
       "description": "New FL-II license issued for restaurant - Coconut Boy",
       "metadata": {
         "license_type": "FL-II",
@@ -112,7 +107,7 @@
       "event_type": "liquor_license",
       "source": "Maharashtra_Excise",
       "location": "Lower Parel, Mumbai",
-      "timestamp": "2026-03-13T23:22:05.225348",
+      "timestamp": "2026-03-14T00:36:42.364499",
       "description": "FL-III license renewal for bar - Phoenix Mills",
       "metadata": {
         "license_type": "FL-III",
@@ -121,7 +116,7 @@
     }
   ],
   "cost_tracking": {
-    "tokens_used": 1500,
-    "estimated_cost": 0.001
+    "tokens_used": 0,
+    "estimated_cost": 0.0
   }
 }

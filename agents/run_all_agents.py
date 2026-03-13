@@ -405,8 +405,21 @@ class AgentOrchestrator:
         try:
             cost_log_path = self.base_dir / 'cost_log.json'
             if cost_log_path.exists():
-                with open(cost_log_path, 'r') as f:
-                    logs = json.load(f)
+                with open(cost_log_path, 'r', encoding='utf-8') as f:
+                    content = f.read().strip()
+                    
+                    # Handle malformed JSON (trailing commas, multiple objects)
+                    try:
+                        logs = json.loads(content)
+                    except json.JSONDecodeError as e:
+                        # Try to fix trailing comma
+                        if content.rstrip().endswith(','):
+                            content = content.rstrip().rstrip(',')
+                            if not content.endswith(']'):
+                                content += '\n]'
+                            logs = json.loads(content)
+                        else:
+                            raise e
                 
                 total_cost = sum(log.get('estimated_cost', 0) for log in logs)
                 print(f"\n💰 Total Cost: ${total_cost:.4f}")
@@ -428,7 +441,8 @@ class AgentOrchestrator:
             else:
                 print("⚠️  Cost log not found")
         except Exception as e:
-            print(f"⚠️  Error reading cost log: {e}")
+            print(f"⚠️  Could not parse cost log (malformed JSON)")
+            print(f"   Continuing without cost summary...")
         
         # Overall status
         print("\n" + "="*70)

@@ -166,28 +166,17 @@ class NovaActScraper:
     
     def log_cost(self, results: Dict):
         """Log cost for tracking"""
-        log_entry = {
-            'timestamp': datetime.now().isoformat(),
-            'operation': 'web_scraping',
-            'model': 'Amazon Nova Act',
-            'elapsed_seconds': results.get('elapsed_seconds', 0),
-            'estimated_cost': results.get('estimated_cost', 0)
-        }
-        
-        try:
-            log_file = 'cost_log.json'
-            if os.path.exists(log_file):
-                with open(log_file, 'r') as f:
-                    logs = json.load(f)
-            else:
-                logs = []
-            
-            logs.append(log_entry)
-            
-            with open(log_file, 'w') as f:
-                json.dump(logs, f, indent=2)
-        except Exception as e:
-            print(f"⚠️  Could not log cost: {str(e)}")
+        # Add parent directory to path for utils import
+        sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        from utils import log_cost
+        log_cost(
+            agent_name='web_scraping',
+            tokens_used=0,  # Nova Act uses time-based pricing
+            estimated_cost=results.get('estimated_cost', 0),
+            model='Amazon Nova Act',
+            operation='web_scraping',
+            elapsed_seconds=results.get('elapsed_seconds', 0)
+        )
 
 
 def main():

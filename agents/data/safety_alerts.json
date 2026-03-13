@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-13T23:22:13.537497",
+  "generated_at": "2026-03-14T00:36:45.194252",
   "user_location": {
     "latitude": 19.076,
     "longitude": 72.8777,
@@ -13,44 +13,24 @@
   },
   "alerts": [
     {
-      "id": "img-sample_images\\safety_violation_1.jpg",
-      "alert_title": "Immediate Safety Violation at Mumbai Construction Site",
-      "alert_message": "An immediate safety violation has been identified at a construction site in Mumbai. This poses a significant risk to public safety. Do not approach the area and report this to local authorities immediately.",
-      "priority": 10,
-      "action": "Do not approach the area. Report this to local authorities immediately.",
+      "id": "img-sample_images\\construction_site_1.jpg",
+      "alert_title": "Safety Alert",
+      "alert_message": "### Construction Site Analysis\n\n1. **Type of Construction**:\n   - The image depicts a construction site, but the specific type (building, road, infrastructure, etc.) is not clearly identifiable from t",
+      "priority": 8,
+      "action": "Stay informed and exercise caution",
       "location": "Mumbai",
       "source": "image_analysis",
-      "detected_at": "2026-03-11T22:15:50.015373",
-      "original_data": {
-        "violation_id": "img-sample_images\\safety_violation_1.jpg",
-        "source": "image_analysis",
-        "image_path": "sample_images\\safety_violation_1.jpg",
-        "description": "### Construction Site Analysis for Mumbai Civic Monitoring\n\n#### 1. Type of Construction\n- **Visible Construction**: The image shows a construction site with a large rectangular structure, likely a building foundation or a retaining wall. \n\n#### 2. Visible Signage\n- **Signage**: There is no visible ",
-        "location": "Mumbai",
-        "detected_at": "2026-03-11T22:15:50.015373",
-        "severity": "high",
-        "analyzed_by": "Amazon Nova 2 Omni"
-      }
+      "detected_at": "2026-03-11T22:15:43.904181"
     },
     {
-      "id": "img-sample_images\\construction_site_1.jpg",
-      "alert_title": "High-Severity Construction Hazard in Mumbai",
-      "alert_message": "A high-severity construction hazard has been detected in Mumbai. Please avoid the area and use alternative routes if necessary. Ensure to follow any detours or instructions provided by local authorities.",
+      "id": "img-sample_images\\safety_violation_1.jpg",
+      "alert_title": "Safety Alert",
+      "alert_message": "### Construction Site Analysis for Mumbai Civic Monitoring\n\n#### 1. Type of Construction\n- **Visible Construction**: The image shows a construction site with a large rectangular structure, likely a bu",
       "priority": 8,
-      "action": "Avoid the area and use alternative routes. Follow local authorities' instructions.",
+      "action": "Stay informed and exercise caution",
       "location": "Mumbai",
       "source": "image_analysis",
-      "detected_at": "2026-03-11T22:15:43.904181",
-      "original_data": {
-        "violation_id": "img-sample_images\\construction_site_1.jpg",
-        "source": "image_analysis",
-        "image_path": "sample_images\\construction_site_1.jpg",
-        "description": "### Construction Site Analysis\n\n1. **Type of Construction**:\n   - The image depicts a construction site, but the specific type (building, road, infrastructure, etc.) is not clearly identifiable from the image alone. The site appears to be a general construction area with a focus on safety.\n\n2. **Vis",
-        "location": "Mumbai",
-        "detected_at": "2026-03-11T22:15:43.904181",
-        "severity": "high",
-        "analyzed_by": "Amazon Nova 2 Omni"
-      }
+      "detected_at": "2026-03-11T22:15:50.015373"
     }
   ],
   "raw_issues": {

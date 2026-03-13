@@ -1,0 +1,67 @@
+[
+  {
+    "ward": "H-West",
+    "ward_name": "Bandra West",
+    "location": "Bandra West",
+    "permit_stage": "CC",
+    "permit_stage_full": "Commencement Certificate",
+    "project_type": "Residential",
+    "project_name": "Residential Tower - Bandra West",
+    "status": "Approved",
+    "date_detected": "2026-03-13",
+    "metadata": {
+      "floors": 15,
+      "units": 45,
+      "estimated_completion": "2027-03-13"
+    },
+    "impact_summary": "New residential tower construction expected in the area",
+    "neighborhood_impact": [
+      "construction",
+      "new_housing",
+      "high_rise"
+    ]
+  },
+  {
+    "ward": "H-West",
+    "ward_name": "Bandra West",
+    "location": "Khar West",
+    "permit_stage": "IOD",
+    "permit_stage_full": "Intimation of Disapproval",
+    "project_type": "Commercial",
+    "project_name": "Commercial Complex - Bandra West",
+    "status": "Filed",
+    "date_detected": "2026-03-13",
+    "metadata": {
+      "floors": 8,
+      "units": 20,
+      "estimated_completion": "2027-03-13"
+    },
+    "impact_summary": "New commercial development planned",
+    "neighborhood_impact": [
+      "construction",
+      "commercial_development"
+    ]
+  },
+  {
+    "ward": "H-West",
+    "ward_name": "Bandra West",
+    "location": "Bandra West",
+    "permit_stage": "BCC",
+    "permit_stage_full": "Building Completion Certificate",
+    "project_type": "Mixed Use",
+    "project_name": "Mixed Use Development - Bandra West",
+    "status": "Completed",
+    "date_detected": "2026-03-13",
+    "metadata": {
+      "floors": 20,
+      "units": 60,
+      "estimated_completion": "2027-03-13"
+    },
+    "impact_summary": "Mixed-use building nearing completion",
+    "neighborhood_impact": [
+      "new_housing",
+      "commercial_development",
+      "high_rise"
+    ]
+  }
+]
