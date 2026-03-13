@@ -220,6 +220,11 @@ class AgentOrchestrator:
                 'env': {}
             },
             {
+                'script': 'permit-monitor/bmc_ward_monitor.py',
+                'name': 'BMC Ward Monitor (Ward-Level Permits)',
+                'env': {}
+            },
+            {
                 'script': 'social-listening/social_listener_nova.py',
                 'name': 'Social Listening Agent (Reddit + Sentiment)',
                 'env': {}
@@ -341,6 +346,7 @@ class AgentOrchestrator:
         expected_files = [
             'data/news.json',
             'data/permits.json',
+            'data/bmc_permits.json',
             'data/social.json',
             'data/images.json',
             'data/morning_briefing.json',
