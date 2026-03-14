@@ -114,5 +114,25 @@
     "operation": "topic_analysis",
     "tokens_used": 0,
     "estimated_cost": 0.0
+  },
+  {
+    "agent": "rag_qa_system",
+    "timestamp": "2026-03-14T10:32:24.484077",
+    "model": "Nova 2 Lite + Titan Embeddings",
+    "operation": "rag_qa",
+    "tokens_used": 0,
+    "estimated_cost": 0.0,
+    "num_questions": 5,
+    "num_documents": 69
+  },
+  {
+    "agent": "rag_qa_system",
+    "timestamp": "2026-03-14T10:37:12.718615",
+    "model": "Nova 2 Lite + Titan Embeddings",
+    "operation": "rag_qa",
+    "tokens_used": 1333,
+    "estimated_cost": 0.0012187,
+    "num_questions": 5,
+    "num_documents": 69
   }
 ]

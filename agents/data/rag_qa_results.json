@@ -1,0 +1,683 @@
+[
+  {
+    "question": "What construction projects are happening in Andheri?",
+    "answer": "Construction projects happening in Andheri include:\n\n1. A residential tower in Andheri West [1].\n2. A mixed-use development in Andheri West at Lokhandwala [2].\n3. A commercial complex in Andheri West at Versova [3].",
+    "sources": [
+      {
+        "source": "permits",
+        "metadata": {
+          "ward": "K-West",
+          "ward_name": "Andheri West",
+          "location": "Andheri West",
+          "permit_stage": "CC",
+          "permit_stage_full": "Commencement Certificate",
+          "project_type": "Residential",
+          "project_name": "Residential Tower - Andheri West",
+          "status": "Approved",
+          "date_detected": "2026-03-14",
+          "metadata": {
+            "floors": 15,
+            "units": 45,
+            "estimated_completion": "2027-03-14"
+          },
+          "impact_summary": "New residential tower construction expected in the area",
+          "neighborhood_impact": [
+            "construction",
+            "new_housing",
+            "high_rise"
+          ],
+          "geo": {
+            "lat": 19.135,
+            "lon": 72.825
+          },
+          "timeline_stage": "Construction Starting",
+          "agent_metadata": {
+            "agent": "permit_monitor",
+            "source": "BMC Ward Monitor",
+            "confidence": 0.85,
+            "version": "2.0"
+          },
+          "impact_score": 6,
+          "permit_id": "b9356f07f19fa59b"
+        }
+      },
+      {
+        "source": "permits",
+        "metadata": {
+          "ward": "K-West",
+          "ward_name": "Andheri West",
+          "location": "Lokhandwala",
+          "permit_stage": "BCC",
+          "permit_stage_full": "Building Completion Certificate",
+          "project_type": "Mixed Use",
+          "project_name": "Mixed Use Development - Andheri West",
+          "status": "Completed",
+          "date_detected": "2026-03-14",
+          "metadata": {
+            "floors": 20,
+            "units": 60,
+            "estimated_completion": "2027-03-14"
+          },
+          "impact_summary": "Mixed-use building nearing completion",
+          "neighborhood_impact": [
+            "new_housing",
+            "commercial_development",
+            "high_rise"
+          ],
+          "geo": {
+            "lat": 19.135,
+            "lon": 72.825
+          },
+          "timeline_stage": "Near Completion",
+          "agent_metadata": {
+            "agent": "permit_monitor",
+            "source": "BMC Ward Monitor",
+            "confidence": 0.85,
+            "version": "2.0"
+          },
+          "impact_score": 4,
+          "permit_id": "90fdea2ecb5bbc84"
+        }
+      },
+      {
+        "source": "permits",
+        "metadata": {
+          "ward": "K-West",
+          "ward_name": "Andheri West",
+          "location": "Versova",
+          "permit_stage": "IOD",
+          "permit_stage_full": "Intimation of Disapproval",
+          "project_type": "Commercial",
+          "project_name": "Commercial Complex - Andheri West",
+          "status": "Filed",
+          "date_detected": "2026-03-14",
+          "metadata": {
+            "floors": 8,
+            "units": 20,
+            "estimated_completion": "2027-03-14"
+          },
+          "impact_summary": "New commercial development planned",
+          "neighborhood_impact": [
+            "construction",
+            "commercial_development"
+          ],
+          "geo": {
+            "lat": 19.135,
+            "lon": 72.825
+          },
+          "timeline_stage": "Planning",
+          "agent_metadata": {
+            "agent": "permit_monitor",
+            "source": "BMC Ward Monitor",
+            "confidence": 0.85,
+            "version": "2.0"
+          },
+          "impact_score": 2,
+          "permit_id": "2ff79cb95c93bdcf"
+        }
+      },
+      {
+        "source": "news",
+        "metadata": {
+          "article_number": 34,
+          "title": "Underground road network to expand; Fourth Mumbai in the works",
+          "category": "Civic",
+          "mentions": [],
+          "permit_check_required": true,
+          "relevance_score": 6,
+          "url": "https://www.hindustantimes.com/cities/mumbai-news/underground-road-network-to-expand-fourth-mumbai-in-the-works-101772826576245.html",
+          "summary": "Presenting the budget in the legislative assembly, Fadnavis said 70% of the state’s population is expected to be living in cities in the next two decades, prompting the government to develop new urban areas and growth centres while also rebuilding the infrastructure in existing cities"
+        }
+      },
+      {
+        "source": "permits",
+        "metadata": {
+          "ward": "H-West",
+          "ward_name": "Bandra West",
+          "location": "Bandra West",
+          "permit_stage": "BCC",
+          "permit_stage_full": "Building Completion Certificate",
+          "project_type": "Mixed Use",
+          "project_name": "Mixed Use Development - Bandra West",
+          "status": "Completed",
+          "date_detected": "2026-03-14",
+          "metadata": {
+            "floors": 20,
+            "units": 60,
+            "estimated_completion": "2027-03-14"
+          },
+          "impact_summary": "Mixed-use building nearing completion",
+          "neighborhood_impact": [
+            "new_housing",
+            "commercial_development",
+            "high_rise"
+          ],
+          "geo": {
+            "lat": 19.0596,
+            "lon": 72.8295
+          },
+          "timeline_stage": "Near Completion",
+          "agent_metadata": {
+            "agent": "permit_monitor",
+            "source": "BMC Ward Monitor",
+            "confidence": 0.85,
+            "version": "2.0"
+          },
+          "impact_score": 4,
+          "permit_id": "346891d71f2d5196"
+        }
+      }
+    ],
+    "cost": 0.0002297
+  },
+  {
+    "question": "Are there any safety concerns in Mumbai?",
+    "answer": "The provided context does not contain enough information to determine if there are any safety concerns in Mumbai. [1], [2], [4] are neutral, and [3], [5] pertain to specific issues but do not indicate general safety concerns.",
+    "sources": [
+      {
+        "source": "alerts",
+        "metadata": {
+          "alert_id": "social-1rqvoq2",
+          "type": "community",
+          "title": "Trending: Just a normal Mumbai moment...",
+          "message": "A reflection on a simple yet meaningful moment in Mumbai.",
+          "location": "Mumbai",
+          "priority": "medium",
+          "source": "social",
+          "url": "https://reddit.com/r/mumbai/comments/1rqvoq2/just_a_normal_mumbai_moment/",
+          "timestamp": "2026-03-11T20:13:30",
+          "engagement": {
+            "upvotes": 88,
+            "comments": 2,
+            "score": 88
+          },
+          "sentiment": "neutral",
+          "priority_score": 5
+        }
+      },
+      {
+        "source": "social",
+        "metadata": {
+          "id": "1rqvoq2",
+          "source": "reddit_r/mumbai",
+          "author": "Unique_Inevitable_27",
+          "title": "Just a normal Mumbai moment",
+          "content": "Sometimes a simple frame says a lot about the city.",
+          "url": "https://reddit.com/r/mumbai/comments/1rqvoq2/just_a_normal_mumbai_moment/",
+          "created_utc": 1773240210.0,
+          "timestamp": "2026-03-11T20:13:30",
+          "engagement": {
+            "upvotes": 88,
+            "downvotes": 0,
+            "comments": 2,
+            "score": 88
+          },
+          "subreddit": "mumbai",
+          "flair": "Photography",
+          "sentiment": "neutral",
+          "topics": [
+            "Mumbai",
+            "moment",
+            "city"
+          ],
+          "summary": "A reflection on a simple yet meaningful moment in Mumbai."
+        }
+      },
+      {
+        "source": "social",
+        "metadata": {
+          "id": "1rqurja",
+          "source": "reddit_r/mumbai",
+          "author": "Stunning_Media_6705",
+          "title": "HELP NEEDED: Mainstreet Marketplace (Bandra) holding my money hostage. 30+ days, no delivery, refusing refund. Anyone in Mumbai can help?",
+          "content": "Hi everyone, I’m reaching out to the Mumbai community because I’m at my wit's end with **Mainstreet Marketplace** (the sneaker/streetwear store in Bandra/Santacruz).\n\nI ordered a watch  over 30 days ago. They promised delivery in 15 days. Since then:\n\n* **Broken Promises:** I’ve been told \"it’s shipping tomorrow\" at least three times. Still no tracking ID.\n* **Refund Refusal:** They are flat-out refusing a cash refund to my original payment method, insisting I take **store credit** only. Why would I want credit for a store that doesn't deliver?\n* **Ghosting:** They’ve stopped responding to WhatsApp and calls.\n\n**I NEED YOUR HELP:**\n\n1. **Local Context:** Has anyone else in Mumbai dealt with their Bandra store recently? Is there a specific manager or person I should talk to who actually gets things done?\n2. **In-Person Pressure:** Since I’m not currently able to visit their Perry Cross Road store, has anyone had success by showing up in person? Does that actually force them to process a refund?\n3. **Owner/Staff Contact:** If anyone has a direct escalation email or knows someone working there, please DM me.\n\n**WARNING:** If you’re thinking of buying from them, DON'T. They do not respect deadlines, they have zero customer service, and they will trap your money in \"store credit\" indefinitely.\n\nHas anyone managed to get a **CASH refund** from them after they defaulted on delivery? Any advice on how to handle these guys locally would be huge.",
+          "url": "https://reddit.com/r/mumbai/comments/1rqurja/help_needed_mainstreet_marketplace_bandra_holding/",
+          "created_utc": 1773238134.0,
+          "timestamp": "2026-03-11T19:38:54",
+          "engagement": {
+            "upvotes": 1,
+            "downvotes": 0,
+            "comments": 0,
+            "score": 1
+          },
+          "subreddit": "mumbai",
+          "flair": "General",
+          "sentiment": "negative",
+          "topics": [
+            "Mainstreet Marketplace",
+            "delivery",
+            "refund"
+          ],
+          "summary": "A Mumbai resident is seeking help from the community regarding a failed delivery and refund from Mainstreet Marketplace in Bandra."
+        }
+      },
+      {
+        "source": "social",
+        "metadata": {
+          "id": "1rqv6y8",
+          "source": "reddit_r/mumbai",
+          "author": "Lanky_Wash6220",
+          "title": "Hotel suggestions for single night stay in bandra west",
+          "content": "Any good suggestion for good hotel stay in bandra for tonight within 3 to 4 k per night \n",
+          "url": "https://reddit.com/r/mumbai/comments/1rqv6y8/hotel_suggestions_for_single_night_stay_in_bandra/",
+          "created_utc": 1773239101.0,
+          "timestamp": "2026-03-11T19:55:01",
+          "engagement": {
+            "upvotes": 1,
+            "downvotes": 0,
+            "comments": 0,
+            "score": 1
+          },
+          "subreddit": "mumbai",
+          "flair": "General",
+          "sentiment": "neutral",
+          "topics": [
+            "hotel",
+            "Bandra West",
+            "stay"
+          ],
+          "summary": "The user is seeking hotel suggestions for a single night stay in Bandra West within a budget of 3 to 4 thousand per night."
+        }
+      },
+      {
+        "source": "social",
+        "metadata": {
+          "id": "1rqv2bx",
+          "source": "reddit_r/mumbai",
+          "author": "shut-it-clown",
+          "title": "How long does normal passport take to process at RPO Mumbai?",
+          "content": "I need my passport urgently as my whole medical career depends on it. Police verification got cleared after giving bribes and I need an insider who can speed up my process at the RPO. Ready to pay bribe or whatever is needed. Any suggestions? Appointment dates are 2 months away and I have 7 days before I get expelled from my university.",
+          "url": "https://reddit.com/r/mumbai/comments/1rqv2bx/how_long_does_normal_passport_take_to_process_at/",
+          "created_utc": 1773238801.0,
+          "timestamp": "2026-03-11T19:50:01",
+          "engagement": {
+            "upvotes": 0,
+            "downvotes": 0,
+            "comments": 0,
+            "score": 0
+          },
+          "subreddit": "mumbai",
+          "flair": "General",
+          "sentiment": "negative",
+          "topics": [
+            "passport processing",
+            "bribery",
+            "urgency"
+          ],
+          "summary": "A person is seeking urgent help to expedite their passport processing at RPO Mumbai due to an impending expulsion from university and the critical need for their passport for their medical career."
+        }
+      }
+    ],
+    "cost": 0.0002141
+  },
+  {
+    "question": "What new restaurants or businesses are opening?",
+    "answer": "The context provided does not contain specific information about new restaurants or businesses opening. It only mentions new commercial activities and developments. Therefore, I cannot provide details on new restaurants or businesses based on the given context.",
+    "sources": [
+      {
+        "source": "alerts",
+        "metadata": {
+          "alert_id": "permit-commercial-3",
+          "type": "new_business",
+          "title": "New Commercial Activity",
+          "message": "LAKEPLACE MAFIA AND THE OLD LADY GANG GANG TIP#19 TOPOLO RESTAURANT",
+          "location": "Mumbai",
+          "priority": "low",
+          "source": "permit",
+          "timestamp": "2026-03-11T21:36:59.635169",
+          "priority_score": 6
+        }
+      },
+      {
+        "source": "alerts",
+        "metadata": {
+          "alert_id": "permit-N/A",
+          "type": "development",
+          "title": "New Development: MAYFAIR VISHWARAJA",
+          "message": "MAYFAIR VISHWARAJA is a new real estate project in Thane, Mumbai, promoted by an unknown entity.",
+          "location": "Thane, Mumbai",
+          "priority": "medium",
+          "source": "permit",
+          "timestamp": "2026-03-11T21:36:54.121679",
+          "metadata": {
+            "project_name": "MAYFAIR VISHWARAJA",
+            "promoter": "Unknown Promoter",
+            "district": "Thane",
+            "registration_number": "N/A",
+            "url": "https://maharera.maharashtra.gov.in/projects-search-result?page=1",
+            "data_source": "maharera_selenium"
+          },
+          "priority_score": 5
+        }
+      },
+      {
+        "source": "alerts",
+        "metadata": {
+          "alert_id": "permit-N/A",
+          "type": "development",
+          "title": "New Development: UNNATHI WOODS PHASE VII A",
+          "message": "A new real estate project named 'UNNATHI WOODS PHASE VII A' by an unknown promoter has been registered in Thane, Mumbai.",
+          "location": "Thane, Mumbai",
+          "priority": "medium",
+          "source": "permit",
+          "timestamp": "2026-03-11T21:36:54.121679",
+          "metadata": {
+            "project_name": "UNNATHI WOODS PHASE VII A",
+            "promoter": "Unknown Promoter",
+            "district": "Thane",
+            "registration_number": "N/A",
+            "url": "https://maharera.maharashtra.gov.in/projects-search-result?page=1",
+            "data_source": "maharera_selenium"
+          },
+          "priority_score": 5
+        }
+      },
+      {
+        "source": "alerts",
+        "metadata": {
+          "alert_id": "permit-N/A",
+          "type": "development",
+          "title": "New Development: GREEN CITY 3",
+          "message": "A real estate project named GREEN CITY 3 by an unknown promoter has been registered in Nagpur, Mumbai.",
+          "location": "Nagpur, Mumbai",
+          "priority": "medium",
+          "source": "permit",
+          "timestamp": "2026-03-11T21:36:54.121679",
+          "metadata": {
+            "project_name": "GREEN CITY 3",
+            "promoter": "Unknown Promoter",
+            "district": "Nagpur",
+            "registration_number": "N/A",
+            "url": "https://maharera.maharashtra.gov.in/projects-search-result?page=1",
+            "data_source": "maharera_selenium"
+          },
+          "priority_score": 5
+        }
+      },
+      {
+        "source": "permits",
+        "metadata": {
+          "ward": "K-West",
+          "ward_name": "Andheri West",
+          "location": "Versova",
+          "permit_stage": "IOD",
+          "permit_stage_full": "Intimation of Disapproval",
+          "project_type": "Commercial",
+          "project_name": "Commercial Complex - Andheri West",
+          "status": "Filed",
+          "date_detected": "2026-03-14",
+          "metadata": {
+            "floors": 8,
+            "units": 20,
+            "estimated_completion": "2027-03-14"
+          },
+          "impact_summary": "New commercial development planned",
+          "neighborhood_impact": [
+            "construction",
+            "commercial_development"
+          ],
+          "geo": {
+            "lat": 19.135,
+            "lon": 72.825
+          },
+          "timeline_stage": "Planning",
+          "agent_metadata": {
+            "agent": "permit_monitor",
+            "source": "BMC Ward Monitor",
+            "confidence": 0.85,
+            "version": "2.0"
+          },
+          "impact_score": 2,
+          "permit_id": "2ff79cb95c93bdcf"
+        }
+      }
+    ],
+    "cost": 0.0001587
+  },
+  {
+    "question": "What are people discussing on social media about Mumbai?",
+    "answer": "People are discussing various topics on social media about Mumbai, such as normal daily moments [1], trending topics [2], job opportunities [3], [5], and budget-friendly birthday parties [4].",
+    "sources": [
+      {
+        "source": "social",
+        "metadata": {
+          "id": "1rqvoq2",
+          "source": "reddit_r/mumbai",
+          "author": "Unique_Inevitable_27",
+          "title": "Just a normal Mumbai moment",
+          "content": "Sometimes a simple frame says a lot about the city.",
+          "url": "https://reddit.com/r/mumbai/comments/1rqvoq2/just_a_normal_mumbai_moment/",
+          "created_utc": 1773240210.0,
+          "timestamp": "2026-03-11T20:13:30",
+          "engagement": {
+            "upvotes": 88,
+            "downvotes": 0,
+            "comments": 2,
+            "score": 88
+          },
+          "subreddit": "mumbai",
+          "flair": "Photography",
+          "sentiment": "neutral",
+          "topics": [
+            "Mumbai",
+            "moment",
+            "city"
+          ],
+          "summary": "A reflection on a simple yet meaningful moment in Mumbai."
+        }
+      },
+      {
+        "source": "alerts",
+        "metadata": {
+          "alert_id": "social-1rqvoq2",
+          "type": "community",
+          "title": "Trending: Just a normal Mumbai moment...",
+          "message": "A reflection on a simple yet meaningful moment in Mumbai.",
+          "location": "Mumbai",
+          "priority": "medium",
+          "source": "social",
+          "url": "https://reddit.com/r/mumbai/comments/1rqvoq2/just_a_normal_mumbai_moment/",
+          "timestamp": "2026-03-11T20:13:30",
+          "engagement": {
+            "upvotes": 88,
+            "comments": 2,
+            "score": 88
+          },
+          "sentiment": "neutral",
+          "priority_score": 5
+        }
+      },
+      {
+        "source": "social",
+        "metadata": {
+          "id": "1rqvbgg",
+          "source": "reddit_r/mumbai",
+          "author": "gamescape__",
+          "title": "Looking for Social Media Manager at Gamescape!",
+          "content": "Looking for a Social Media Manager + Video Creator for a Gaming Studio (Navi Mumbai)\n\nHii everyone!\n\nWe are a premium gaming studio in Navi Mumbai and we’re looking for someone who genuinely enjoys being around gaming, people, and content creation to join us as a Social Media Manager + Video Content Creator.\n\nThis role is very hands-on. You’ll be around the action inside the venue capturing matches, reactions, and the overall vibe that makes the place fun\n\nWe already have an in house ideation team that comes up with concepts and ideas. What we need is someone who can bring those ideas to life through shooting, editing, and publishing short-form video content.\n\nMost of the content will be for Instagram Reels and YouTube Shorts.\n\nIf you enjoy filming real people having fun, competitive moments, gaming setups, behind the scenes footage, and turning that into engaging videos, you’ll probably enjoy this role.\n\nWhat you’ll be doing\n\n\\~ Shooting short-form content inside the venue\n\n\\~ Editing reels and shorts with good pacing and hooks\n\n\\~ Working with our team to execute content ideas\n\n\\~ Posting and managing content schedules\n\n\\~ Keeping the overall content quality consistent\n\nWhat we’re looking for\n\n\\~ Someone who already creates social media video content\n\n\\~ You should have your own basic shooting setup I.e. a good phone or camera, mic, basic lights etc\n\n\\~ Be Comfortable with editing tools like Premiere Pro, Final Cut, CapCut or similar\n\n\\~ Have a Good understanding of social media formats and hooks\n\n\\~ Be Comfortable working in a live environment with people and gaming setups\n\nIt is a Bonus if\n\n\\~ You like gaming or gaming culture\n\n\\~ You’ve worked with entertainment, lifestyle, events, or creator content before\n\n\\~ You understand thumbnails, graphics, or simple design\n\nThis role can be full-time or freelance, but it is an on-location role in Navi Mumbai.\n\nYour Salary will depend on your work and portfolio.\n\nIf this sounds interesting, please send over:\n\n\\~ Your resume\n\n\\~ Links to your content or portfolio\n\n\\~ Any social media pages you’ve worked on\n\nWe are looking forward to meeting someone who enjoys creating content as much as we enjoy building this space!",
+          "url": "https://reddit.com/r/mumbai/comments/1rqvbgg/looking_for_social_media_manager_at_gamescape/",
+          "created_utc": 1773239390.0,
+          "timestamp": "2026-03-11T19:59:50",
+          "engagement": {
+            "upvotes": 2,
+            "downvotes": 0,
+            "comments": 1,
+            "score": 2
+          },
+          "subreddit": "mumbai",
+          "flair": "Careers",
+          "sentiment": "positive",
+          "topics": [
+            "job opportunity",
+            "social media",
+            "gaming"
+          ],
+          "summary": "A gaming studio in Navi Mumbai is seeking a Social Media Manager + Video Content Creator."
+        }
+      },
+      {
+        "source": "social",
+        "metadata": {
+          "id": "1rqw2lq",
+          "source": "reddit_r/mumbai",
+          "author": "goddessof-dusk",
+          "title": "Birthday Party under 10K",
+          "content": "Im F22, and ill be inviting around 9 people for my birthday. Now my budget is around 10k. And everyone is going to drink. \n\nShould i just book an AIRBNB for 5-6K and rest spend on some cheap alcohol and food like pizza hut and momos and frozen chicken nuggets etc.\n\nOR is there any restaurant where i can accommodate everyone under 10k with food and drinks. \n\nPlease suggest fairly good restaurants, not too cheap nor too expensive. \n\nPersonally i feel people would enjoy more in airbnb but the quality of food/drinks would be better in restaurant.",
+          "url": "https://reddit.com/r/mumbai/comments/1rqw2lq/birthday_party_under_10k/",
+          "created_utc": 1773241069.0,
+          "timestamp": "2026-03-11T20:27:49",
+          "engagement": {
+            "upvotes": 1,
+            "downvotes": 0,
+            "comments": 4,
+            "score": 1
+          },
+          "subreddit": "mumbai",
+          "flair": "General",
+          "sentiment": "neutral",
+          "topics": [
+            "birthday party",
+            "budget",
+            "restaurants"
+          ],
+          "summary": "The post discusses planning a birthday party on a budget of 10K, considering options like booking an Airbnb or finding a suitable restaurant."
+        }
+      },
+      {
+        "source": "social",
+        "metadata": {
+          "id": "1rqwp8u",
+          "source": "reddit_r/mumbai",
+          "author": "PerceptionWise5445",
+          "title": "Hiring for Multiple Roles in Investors Relation.",
+          "content": "Hi People, \n\nI require an IR Team for my team, people with relevant experience can DM me their resume or CV. I'll revert back on the DM and you'll receive a call by Monday or Tuesday from the HR for initial screening. \n\nRequired Experience :- 1 - 7 years in Wealth or AMC or Wealth Operations Role.\n\nPay:- Salary no bar for right candidate and please be realistic. Its a role based in Mumbai in One BKC. ",
+          "url": "https://reddit.com/r/mumbai/comments/1rqwp8u/hiring_for_multiple_roles_in_investors_relation/",
+          "created_utc": 1773242485.0,
+          "timestamp": "2026-03-11T20:51:25",
+          "engagement": {
+            "upvotes": 1,
+            "downvotes": 0,
+            "comments": 2,
+            "score": 1
+          },
+          "subreddit": "mumbai",
+          "flair": "Careers",
+          "sentiment": "neutral",
+          "topics": [
+            "hiring",
+            "Investors Relation",
+            "Mumbai"
+          ],
+          "summary": "A recruitment post for an IR team in Mumbai, seeking candidates with 1-7 years of experience in Wealth or AMC or Wealth Operations Role."
+        }
+      }
+    ],
+    "cost": 0.00018759999999999998
+  },
+  {
+    "question": "What investment opportunities are there in different neighborhoods?",
+    "answer": "The provided context does not contain enough information to identify specific investment opportunities in different neighborhoods. However, it mentions new developments such as GREEN CITY 3 [2] and UNNATHI WOODS PHASE VII A [5], which could be potential areas of interest for investment. For detailed investment opportunities, additional context or data would be required.",
+    "sources": [
+      {
+        "source": "social",
+        "metadata": {
+          "id": "1rqwp8u",
+          "source": "reddit_r/mumbai",
+          "author": "PerceptionWise5445",
+          "title": "Hiring for Multiple Roles in Investors Relation.",
+          "content": "Hi People, \n\nI require an IR Team for my team, people with relevant experience can DM me their resume or CV. I'll revert back on the DM and you'll receive a call by Monday or Tuesday from the HR for initial screening. \n\nRequired Experience :- 1 - 7 years in Wealth or AMC or Wealth Operations Role.\n\nPay:- Salary no bar for right candidate and please be realistic. Its a role based in Mumbai in One BKC. ",
+          "url": "https://reddit.com/r/mumbai/comments/1rqwp8u/hiring_for_multiple_roles_in_investors_relation/",
+          "created_utc": 1773242485.0,
+          "timestamp": "2026-03-11T20:51:25",
+          "engagement": {
+            "upvotes": 1,
+            "downvotes": 0,
+            "comments": 2,
+            "score": 1
+          },
+          "subreddit": "mumbai",
+          "flair": "Careers",
+          "sentiment": "neutral",
+          "topics": [
+            "hiring",
+            "Investors Relation",
+            "Mumbai"
+          ],
+          "summary": "A recruitment post for an IR team in Mumbai, seeking candidates with 1-7 years of experience in Wealth or AMC or Wealth Operations Role."
+        }
+      },
+      {
+        "source": "alerts",
+        "metadata": {
+          "alert_id": "permit-N/A",
+          "type": "development",
+          "title": "New Development: GREEN CITY 3",
+          "message": "A real estate project named GREEN CITY 3 by an unknown promoter has been registered in Nagpur, Mumbai.",
+          "location": "Nagpur, Mumbai",
+          "priority": "medium",
+          "source": "permit",
+          "timestamp": "2026-03-11T21:36:54.121679",
+          "metadata": {
+            "project_name": "GREEN CITY 3",
+            "promoter": "Unknown Promoter",
+            "district": "Nagpur",
+            "registration_number": "N/A",
+            "url": "https://maharera.maharashtra.gov.in/projects-search-result?page=1",
+            "data_source": "maharera_selenium"
+          },
+          "priority_score": 5
+        }
+      },
+      {
+        "source": "news",
+        "metadata": {
+          "article_number": 39,
+          "title": "Cyber frauds con Bombay High Court justice of  ₹6.02 lakh",
+          "category": "Civic",
+          "mentions": [],
+          "permit_check_required": false,
+          "relevance_score": 8,
+          "url": "https://www.hindustantimes.com/cities/mumbai-news/cyber-frauds-con-bombay-high-court-justice-of-6-02-lakh-101772825672517.html",
+          "summary": "The police said they have traced the numbers and the bank accounts of the accused and teams are searching for them"
+        }
+      },
+      {
+        "source": "alerts",
+        "metadata": {
+          "alert_id": "permit-commercial-3",
+          "type": "new_business",
+          "title": "New Commercial Activity",
+          "message": "LAKEPLACE MAFIA AND THE OLD LADY GANG GANG TIP#19 TOPOLO RESTAURANT",
+          "location": "Mumbai",
+          "priority": "low",
+          "source": "permit",
+          "timestamp": "2026-03-11T21:36:59.635169",
+          "priority_score": 6
+        }
+      },
+      {
+        "source": "alerts",
+        "metadata": {
+          "alert_id": "permit-N/A",
+          "type": "development",
+          "title": "New Development: UNNATHI WOODS PHASE VII A",
+          "message": "A new real estate project named 'UNNATHI WOODS PHASE VII A' by an unknown promoter has been registered in Thane, Mumbai.",
+          "location": "Thane, Mumbai",
+          "priority": "medium",
+          "source": "permit",
+          "timestamp": "2026-03-11T21:36:54.121679",
+          "metadata": {
+            "project_name": "UNNATHI WOODS PHASE VII A",
+            "promoter": "Unknown Promoter",
+            "district": "Thane",
+            "registration_number": "N/A",
+            "url": "https://maharera.maharashtra.gov.in/projects-search-result?page=1",
+            "data_source": "maharera_selenium"
+          },
+          "priority_score": 5
+        }
+      }
+    ],
+    "cost": 0.00024339999999999998
+  }
+]
