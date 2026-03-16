@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice AI - CityPulse</title>
+    <meta name="google-signin-client_id" content="148405785124-22q7qqbrtcek3eot9urc9nc0jo60g90p.apps.googleusercontent.com">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // Initialize Google Sign-In button
+        window.onload = function() {
+            if (typeof google !== 'undefined') {
+                google.accounts.id.initialize({
+                    client_id: '148405785124-22q7qqbrtcek3eot9urc9nc0jo60g90p.apps.googleusercontent.com',
+                    callback: handleCredentialResponse
+                });
+                google.accounts.id.renderButton(
+                    document.getElementById('loginBtn'),
+                    { theme: 'filled_blue', size: 'large', text: 'signin_with', shape: 'pill' }
+                );
+            }
+        };
+    </script>
+    <style>
+        .voice-hero {
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        .voice-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .voice-hero p {
+            color: var(--gray);
+            font-size: 1.2rem;
+        }
+
+        .voice-interface {
+            position: relative;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 2rem 0;
+            min-height: 400px;
+        }
+
+        .voice-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        #voiceCanvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        .voice-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .voice-input-container {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .voice-input-wrapper {
+            display: flex;
+            gap: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1rem;
+        }
+
+        .voice-input {
+            flex: 1;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.1rem;
+            outline: none;
+        }
+
+        .voice-input::placeholder {
+            color: var(--gray);
+        }
+
+        .voice-submit-btn {
+            background: var(--gradient-primary);
+            border: none;
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .voice-submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .voice-submit-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .mic-btn {
+            background: rgba(139, 92, 246, 0.2);
+            border: 2px solid rgba(139, 92, 246, 0.5);
+            color: var(--white);
+            padding: 0.75rem 1.25rem;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .mic-btn:hover {
+            background: rgba(139, 92, 246, 0.3);
+            border-color: rgba(139, 92, 246, 0.8);
+            transform: translateY(-2px);
+        }
+
+        .mic-btn.recording {
+            background: rgba(239, 68, 68, 0.3);
+            border-color: rgba(239, 68, 68, 0.8);
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+            }
+        }
+
+        .mic-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .suggestion-chips {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .suggestion-chip {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.875rem;
+        }
+
+        .suggestion-chip:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .voice-response-container {
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s;
+        }
+
+        .voice-response-container.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .voice-response {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+        }
+
+        .voice-response-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .voice-response-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .voice-response-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .voice-response-text {
+            line-height: 1.8;
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .voice-response-actions {
+            display: flex;
+            gap: 1rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .voice-action-btn {
+            background: var(--primary);
+            border: none;
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .voice-action-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .voice-powered-by {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray);
+            font-size: 0.875rem;
+        }
+
+        .voice-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .voice-feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .voice-feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .voice-feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
+        }
+
+        .voice-feature-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .voice-feature-desc {
+            color: var(--gray);
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-city"></i>
+                <span>CityPulse</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="dashboard.html" class="nav-link">
+                    <i class="fas fa-chart-line"></i> Dashboard
+                </a>
+                <a href="permits.html" class="nav-link">
+                    <i class="fas fa-building"></i> Permits
+                </a>
+                <a href="alerts.html" class="nav-link">
+                    <i class="fas fa-bell"></i> Alerts
+                </a>
+                <a href="community.html" class="nav-link">
+                    <i class="fas fa-users"></i> Community
+                </a>
+                <a href="briefing.html" class="nav-link">
+                    <i class="fas fa-sun"></i> Briefing
+                </a>
+                <a href="voice.html" class="nav-link active">
+                    <i class="fas fa-microphone"></i> Voice AI
+                </a>
+            </div>
+            <div class="nav-actions">
+                <button class="notification-btn" id="notificationBtn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">5</span>
+                </button>
+                <div id="userProfile" style="display: none; align-items: center; margin-left: 1rem;"></div>
+                <div id="loginBtn" style="margin-left: 1rem;"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="voice-hero">
+        <div class="container">
+            <h1><span class="gradient-text">Voice AI</span> Assistant</h1>
+            <p>Ask questions about Mumbai in natural language</p>
+        </div>
+    </section>
+
+    <!-- Voice Interface -->
+    <section>
+        <div class="container">
+            <div class="voice-interface">
+                <div class="voice-animation">
+                    <canvas id="voiceCanvas"></canvas>
+                </div>
+                <div class="voice-content">
+                    <div class="voice-input-container">
+                        <div class="voice-input-wrapper">
+                            <input 
+                                type="text" 
+                                class="voice-input" 
+                                id="voiceInput" 
+                                placeholder="Ask me anything about Mumbai..."
+                            />
+                            <button class="mic-btn" id="micBtn" title="Click to speak">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                            <button class="voice-submit-btn" id="voiceSubmitBtn">
+                                <i class="fas fa-paper-plane"></i> Ask
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="suggestion-chips">
+                        <button class="suggestion-chip" data-question="What are the trending topics in Mumbai?">
+                            <i class="fas fa-fire"></i> Trending Topics
+                        </button>
+                        <button class="suggestion-chip" data-question="Are there any safety alerts?">
+                            <i class="fas fa-shield-alt"></i> Safety Alerts
+                        </button>
+                        <button class="suggestion-chip" data-question="Which neighborhoods are best for investment?">
+                            <i class="fas fa-chart-line"></i> Investment Areas
+                        </button>
+                    </div>
+
+                    <div class="voice-response-container" id="voiceResponseContainer">
+                        <div class="voice-response">
+                            <div class="voice-response-header">
+                                <div class="voice-response-avatar">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="voice-response-title">CityPulse AI</div>
+                            </div>
+                            <div class="voice-response-text" id="voiceResponseText">
+                                <!-- Response loaded here -->
+                            </div>
+                            <div class="voice-response-actions">
+                                <button class="voice-action-btn" id="playAudioBtn">
+                                    <i class="fas fa-volume-up"></i> Play Audio
+                                </button>
+                                <div class="voice-powered-by">
+                                    <i class="fas fa-check-circle" style="color: var(--success);"></i>
+                                    Powered by Nova 2 Lite + Polly
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Voice Features -->
+    <section>
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Voice AI Features</h2>
+            <div class="voice-features">
+                <div class="voice-feature-card">
+                    <div class="voice-feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="voice-feature-title">Natural Language</div>
+                    <div class="voice-feature-desc">Ask questions in plain English, powered by Amazon Nova 2 Lite</div>
+                </div>
+                <div class="voice-feature-card">
+                    <div class="voice-feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="voice-feature-title">Voice Responses</div>
+                    <div class="voice-feature-desc">Get audio responses using Amazon Polly Neural TTS</div>
+                </div>
+                <div class="voice-feature-card">
+                    <div class="voice-feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="voice-feature-title">Real-Time Data</div>
+                    <div class="voice-feature-desc">Answers based on live community, safety, and investment data</div>
+                </div>
+                <div class="voice-feature-card">
+                    <div class="voice-feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="voice-feature-title">Fast Responses</div>
+                    <div class="voice-feature-desc">Get instant answers with low-latency AI processing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-city"></i>
+                    <span>CityPulse</span>
+                    <p>Powered by Amazon Nova AI</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="permits.html">Permits</a>
+                    <a href="alerts.html">Alerts</a>
+                    <a href="community.html">Community</a>
+                    <a href="voice.html">Voice AI</a>
+                </div>
+                <div class="footer-tech">
+                    <h4>Technology</h4>
+                    <p>Amazon Nova 2 Lite</p>
+                    <p>Amazon Nova 2 Omni</p>
+                    <p>Titan Embeddings</p>
+                    <p>Amazon Polly</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CityPulse. Built for Amazon Nova Hackathon.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Panel -->
+    <div class="notification-panel" id="notificationPanel">
+        <div class="notification-header">
+            <h3>Notifications</h3>
+            <button class="close-btn" id="closeNotifications">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="notification-list" id="notificationList">
+            <!-- Loaded dynamically -->
+        </div>
+    </div>
+
+    <!-- Google Sign-In -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/activity-tracker.js"></script>
+    <script src="js/voice.js"></script>
+</body>
+</html>

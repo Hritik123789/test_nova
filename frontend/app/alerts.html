@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts - CityPulse</title>
+    <meta name="google-signin-client_id" content="148405785124-22q7qqbrtcek3eot9urc9nc0jo60g90p.apps.googleusercontent.com">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+          crossorigin=""/>
+    <script>
+        // Initialize Google Sign-In button
+        window.onload = function() {
+            if (typeof google !== 'undefined') {
+                google.accounts.id.initialize({
+                    client_id: '148405785124-22q7qqbrtcek3eot9urc9nc0jo60g90p.apps.googleusercontent.com',
+                    callback: handleCredentialResponse
+                });
+                google.accounts.id.renderButton(
+                    document.getElementById('loginBtn'),
+                    { theme: 'filled_blue', size: 'large', text: 'signin_with', shape: 'pill' }
+                );
+            }
+        };
+    </script>
+    <style>
+        .alerts-hero {
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        .alerts-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .alerts-hero p {
+            color: var(--gray);
+            font-size: 1.2rem;
+        }
+
+        .alerts-filters {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .alerts-grid {
+            display: grid;
+            gap: 1.5rem;
+            padding: 2rem 0;
+        }
+
+        .alert-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .alert-card:hover {
+            transform: translateX(10px);
+            border-color: var(--primary);
+        }
+
+        .alert-card.priority-high {
+            border-left: 4px solid var(--danger);
+        }
+
+        .alert-card.priority-medium {
+            border-left: 4px solid var(--warning);
+        }
+
+        .alert-card.priority-low {
+            border-left: 4px solid var(--success);
+        }
+
+        .alert-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+
+        .alert-card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .alert-card-priority {
+            background: var(--gradient-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+
+        .alert-card-message {
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .alert-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .alert-card-source {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray);
+            font-size: 0.875rem;
+        }
+
+        .alert-card-time {
+            color: var(--gray);
+            font-size: 0.875rem;
+        }
+
+        .alert-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .alert-stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .alert-stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .alert-stat-label {
+            color: var(--gray);
+        }
+
+        .high-priority {
+            color: var(--danger);
+        }
+
+        .medium-priority {
+            color: var(--warning);
+        }
+
+        .low-priority {
+            color: var(--success);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-city"></i>
+                <span>CityPulse</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="dashboard.html" class="nav-link">
+                    <i class="fas fa-chart-line"></i> Dashboard
+                </a>
+                <a href="permits.html" class="nav-link">
+                    <i class="fas fa-building"></i> Permits
+                </a>
+                <a href="alerts.html" class="nav-link active">
+                    <i class="fas fa-bell"></i> Alerts
+                </a>
+                <a href="community.html" class="nav-link">
+                    <i class="fas fa-users"></i> Community
+                </a>
+                <a href="briefing.html" class="nav-link">
+                    <i class="fas fa-sun"></i> Briefing
+                </a>
+                <a href="voice.html" class="nav-link">
+                    <i class="fas fa-microphone"></i> Voice AI
+                </a>
+            </div>
+            <div class="nav-actions">
+                <button class="notification-btn" id="notificationBtn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">5</span>
+                </button>
+                <div id="userProfile" style="display: none; align-items: center; margin-left: 1rem;"></div>
+                <div id="loginBtn" style="margin-left: 1rem;"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="alerts-hero">
+        <div class="container">
+            <h1><span class="gradient-text">Smart Alerts</span></h1>
+            <p>Real-time safety and community notifications powered by AI</p>
+        </div>
+    </section>
+
+    <!-- Alert Stats -->
+    <section>
+        <div class="container">
+            <div class="alert-stats">
+                <div class="alert-stat-card">
+                    <div class="alert-stat-number high-priority" id="highPriorityCount">0</div>
+                    <div class="alert-stat-label">High Priority</div>
+                </div>
+                <div class="alert-stat-card">
+                    <div class="alert-stat-number medium-priority" id="mediumPriorityCount">0</div>
+                    <div class="alert-stat-label">Medium Priority</div>
+                </div>
+                <div class="alert-stat-card">
+                    <div class="alert-stat-number low-priority" id="lowPriorityCount">0</div>
+                    <div class="alert-stat-label">Low Priority</div>
+                </div>
+                <div class="alert-stat-card">
+                    <div class="alert-stat-number" id="totalAlertsCount">0</div>
+                    <div class="alert-stat-label">Total Alerts</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section>
+        <div class="container">
+            <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 2rem; margin-bottom: 3rem;">
+                <h2 style="margin-bottom: 1.5rem;">Alert Locations Map</h2>
+                <div id="alertsMap" style="width: 100%; height: 500px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; position: relative; overflow: hidden;">
+                    <!-- Map will be rendered here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section>
+        <div class="container">
+            <div class="alerts-filters">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-list"></i> All Alerts
+                </button>
+                <button class="filter-btn" data-filter="safety">
+                    <i class="fas fa-exclamation-triangle"></i> Safety
+                </button>
+                <button class="filter-btn" data-filter="community">
+                    <i class="fas fa-users"></i> Community
+                </button>
+                <button class="filter-btn" data-filter="development">
+                    <i class="fas fa-building"></i> Development
+                </button>
+                <button class="filter-btn" data-filter="new_business">
+                    <i class="fas fa-store"></i> Business
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alerts Grid -->
+    <section>
+        <div class="container">
+            <div class="alerts-grid" id="alertsGrid">
+                <!-- Loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-city"></i>
+                    <span>CityPulse</span>
+                    <p>Powered by Amazon Nova AI</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="permits.html">Permits</a>
+                    <a href="alerts.html">Alerts</a>
+                    <a href="community.html">Community</a>
+                    <a href="voice.html">Voice AI</a>
+                </div>
+                <div class="footer-tech">
+                    <h4>Technology</h4>
+                    <p>Amazon Nova 2 Lite</p>
+                    <p>Amazon Nova 2 Omni</p>
+                    <p>Titan Embeddings</p>
+                    <p>Amazon Polly</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CityPulse. Built for Amazon Nova Hackathon.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Panel -->
+    <div class="notification-panel" id="notificationPanel">
+        <div class="notification-header">
+            <h3>Notifications</h3>
+            <button class="close-btn" id="closeNotifications">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="notification-list" id="notificationList">
+            <!-- Loaded dynamically -->
+        </div>
+    </div>
+
+    <!-- Google Sign-In -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+            crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/activity-tracker.js"></script>
+    <script src="js/alerts.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "question": "What are the trending topics in Mumbai right now?",
+  "ai_answer": "Currently, some of the trending topics in Mumbai include the latest civic updates on infrastructure projects, ongoing alerts regarding traffic congestion in certain areas, and news on new building permits issued for residential and commercial developments. Stay informed by checking the latest news articles and alerts for the most up-to-date information.",
+  "output_audio": "data\\speech_response_20260316_232716.mp3",
+  "processing_time_seconds": 4.24,
+  "total_cost": 0.005699,
+  "timestamp": "2026-03-16T23:27:19.496216",
+  "services_used": {
+    "ai_model": "Amazon Nova 2 Lite",
+    "text_to_speech": "Amazon Polly Neural TTS"
+  }
+}

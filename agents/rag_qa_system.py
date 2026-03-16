@@ -97,9 +97,36 @@ class CityPulseRAG:
         elif source_type in ['permits', 'bmc_permits']:
             items = data if isinstance(data, list) else data.get('permits', [])
             for permit in items:
+                # Extract fields from nested metadata if present
+                metadata_obj = permit.get('metadata', {})
+                project_name = metadata_obj.get('project_name', permit.get('project_name', ''))
+                promoter = metadata_obj.get('promoter', permit.get('promoter', ''))
+                district = metadata_obj.get('district', permit.get('district', ''))
+                location = permit.get('location', district)
+                permit_type = permit.get('permit_type', permit.get('event_type', ''))
+                status = permit.get('status', 'Registered')
+                description = permit.get('description', '')
+                
+                # Build comprehensive content string
+                content_parts = []
+                if project_name:
+                    content_parts.append(f"Project: {project_name}")
+                if promoter:
+                    content_parts.append(f"Developer: {promoter}")
+                if location:
+                    content_parts.append(f"Location: {location}")
+                if permit_type:
+                    content_parts.append(f"Type: {permit_type}")
+                if status:
+                    content_parts.append(f"Status: {status}")
+                if description:
+                    content_parts.append(f"Details: {description}")
+                
+                content = "Permit - " + ". ".join(content_parts) if content_parts else f"Permit at {location}"
+                
                 doc = {
                     'source': 'permits',
-                    'content': f"Permit: {permit.get('project_name', '')} at {permit.get('location', '')}. Type: {permit.get('permit_type', '')}. Status: {permit.get('status', '')}",
+                    'content': content,
                     'metadata': permit
                 }
                 self.documents.append(doc)
@@ -266,9 +293,18 @@ class CityPulseRAG:
         
         for i, doc in enumerate(relevant_docs, 1):
             context_parts.append(f"[{i}] {doc['content']}")
+            
+            # Extract URL and title from metadata
+            metadata = doc['metadata']
+            source_url = metadata.get('url', '')
+            source_title = metadata.get('title', '') or metadata.get('project_name', '') or 'Source'
+            source_type = doc['source']
+            
             sources.append({
-                'source': doc['source'],
-                'metadata': doc['metadata']
+                'source': source_type,
+                'title': source_title,
+                'url': source_url,
+                'metadata': metadata
             })
         
         context = "\n\n".join(context_parts)
@@ -276,19 +312,29 @@ class CityPulseRAG:
         # Generate answer with Nova 2 Lite
         prompt = f"""You are a helpful assistant for CityPulse, a neighborhood intelligence platform for Mumbai.
 
-Answer the following question based ONLY on the provided context. If the context doesn't contain enough information, say so.
+Answer the following question based ONLY on the provided context. Be informative and include ALL relevant details from the context.
 
 Context:
 {context}
 
 Question: {question}
 
-Answer (be concise and cite sources using [1], [2], etc.):"""
+Instructions:
+- Provide a comprehensive answer covering ALL relevant information from the context
+- When multiple items are mentioned (permits, alerts, topics), list ALL of them with their details
+- Cite sources using [1], [2], etc. when referencing specific information
+- Be specific with project names, locations, promoters, and other details
+- Use plain text only - NO markdown, NO bold, NO bullet points, NO special formatting
+- Write in natural, conversational sentences
+- If asked about permits, mention ALL permits with their project names, locations, and promoters
+- Keep the response clear and well-organized in paragraph form
+
+Answer:"""
 
         try:
             request_body = {
                 "messages": [{"role": "user", "content": [{"text": prompt}]}],
-                "inferenceConfig": {"max_new_tokens": 400, "temperature": 0.3}
+                "inferenceConfig": {"max_new_tokens": 600, "temperature": 0.3}
             }
             
             response = self.bedrock.invoke_model(

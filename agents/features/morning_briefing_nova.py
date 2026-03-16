@@ -118,15 +118,38 @@ class MorningBriefing:
                 {
                     "type": "news",
                     "items_count": len(local_news),
-                    "priority": "high" if len(local_news) > 0 else "low"
+                    "priority": "high" if len(local_news) > 0 else "low",
+                    "sources": [
+                        {"name": "Mid-Day Mumbai", "url": "https://www.mid-day.com/mumbai"},
+                        {"name": "Hindustan Times", "url": "https://www.hindustantimes.com/cities/mumbai-news"},
+                        {"name": "Times of India", "url": "https://timesofindia.indiatimes.com/city/mumbai"}
+                    ]
                 },
                 {
                     "type": "permits",
                     "items_count": len(local_permits),
-                    "priority": "high" if len(local_permits) > 0 else "low"
+                    "priority": "high" if len(local_permits) > 0 else "low",
+                    "sources": [
+                        {"name": "MahaRERA", "url": "https://maharera.maharashtra.gov.in/"},
+                        {"name": "BMC Portal", "url": "https://portal.mcgm.gov.in/"}
+                    ]
+                },
+                {
+                    "type": "social",
+                    "items_count": 0,
+                    "priority": "low",
+                    "sources": [
+                        {"name": "r/mumbai", "url": "https://www.reddit.com/r/mumbai/"},
+                        {"name": "r/india", "url": "https://www.reddit.com/r/india/"}
+                    ]
                 }
             ],
-            "duration_estimate_seconds": len(script.split()) * 0.4  # ~150 words/min
+            "duration_estimate_seconds": len(script.split()) * 0.4,  # ~150 words/min
+            "ai_attribution": {
+                "generation_model": "Amazon Nova 2 Lite",
+                "voice_model": "Amazon Polly Neural TTS",
+                "embedding_model": "Amazon Titan Embeddings"
+            }
         }
         
         return briefing

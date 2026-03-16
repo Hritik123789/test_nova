@@ -1,9 +1,9 @@
 {
   "question": "Which neighborhoods are good for investment?",
-  "answer": "Currently, I don't have specific real estate investment data for Mumbai neighborhoods. However, areas with good connectivity to transport hubs like the airport and metro stations often see higher investment potential. You might consider looking into neighborhoods like Andheri, Santacruz, and Vikhroli for their growing infrastructure and connectivity.",
+  "answer": "Sorry, I couldn't process your question right now.",
   "audio_file": "data\\voice_response.mp3",
   "voice_engine": "Amazon Polly Neural TTS",
   "qa_engine": "Amazon Nova 2 Lite",
-  "timestamp": "2026-03-15T20:37:32.638459",
-  "cost": 0.013106099999999999
+  "timestamp": "2026-03-16T17:00:05.456043",
+  "cost": 0.0024000000000000002
 }

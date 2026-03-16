@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityPulse - AI-Powered Civic Intelligence</title>
+    <meta name="google-signin-client_id" content="148405785124-22q7qqbrtcek3eot9urc9nc0jo60g90p.apps.googleusercontent.com">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // Initialize Google Sign-In button
+        window.onload = function() {
+            google.accounts.id.initialize({
+                client_id: '148405785124-22q7qqbrtcek3eot9urc9nc0jo60g90p.apps.googleusercontent.com',
+                callback: handleCredentialResponse
+            });
+            google.accounts.id.renderButton(
+                document.getElementById('loginBtn'),
+                { theme: 'filled_blue', size: 'large', text: 'signin_with', shape: 'pill' }
+            );
+        };
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-city"></i>
+                <span>CityPulse</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="dashboard.html" class="nav-link">
+                    <i class="fas fa-chart-line"></i> Dashboard
+                </a>
+                <a href="permits.html" class="nav-link">
+                    <i class="fas fa-building"></i> Permits
+                </a>
+                <a href="alerts.html" class="nav-link">
+                    <i class="fas fa-bell"></i> Alerts
+                </a>
+                <a href="community.html" class="nav-link">
+                    <i class="fas fa-users"></i> Community
+                </a>
+                <a href="briefing.html" class="nav-link">
+                    <i class="fas fa-sun"></i> Briefing
+                </a>
+                <a href="voice.html" class="nav-link">
+                    <i class="fas fa-microphone"></i> Voice AI
+                </a>
+            </div>
+            <div class="nav-actions">
+                <button class="notification-btn" id="notificationBtn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">5</span>
+                </button>
+                <div id="userProfile" style="display: none; align-items: center; margin-left: 1rem;"></div>
+                <div id="loginBtn" style="margin-left: 1rem;"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <canvas id="heroCanvas"></canvas>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="gradient-text">AI-Powered</span><br>
+                Civic Intelligence for Mumbai
+            </h1>
+            <p class="hero-subtitle">
+                Real-time insights powered by Amazon Nova AI
+            </p>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="alertCount">0</div>
+                    <div class="stat-label">Active Alerts</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="permitCount">0</div>
+                    <div class="stat-label">Permits</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="topicCount">0</div>
+                    <div class="stat-label">Topics</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="quick-actions">
+        <div class="container">
+            <div class="action-grid">
+                <a href="permits.html" class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>View Permits</h3>
+                    <p>3D visualization of construction permits</p>
+                </a>
+                <a href="alerts.html" class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Safety Alerts</h3>
+                    <p>Real-time safety notifications</p>
+                </a>
+                <a href="community.html" class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-chart-network"></i>
+                    </div>
+                    <h3>Community Pulse</h3>
+                    <p>Topic clusters and trends</p>
+                </a>
+                <a href="voice.html" class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <h3>Voice AI</h3>
+                    <p>Ask questions about your city</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Alerts Preview -->
+    <section class="recent-alerts">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recent Alerts</h2>
+                <a href="alerts.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="alerts-preview" id="alertsPreview">
+                <!-- Loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-city"></i>
+                    <span>CityPulse</span>
+                    <p>Powered by Amazon Nova AI</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="permits.html">Permits</a>
+                    <a href="alerts.html">Alerts</a>
+                    <a href="community.html">Community</a>
+                    <a href="voice.html">Voice AI</a>
+                </div>
+                <div class="footer-tech">
+                    <h4>Technology</h4>
+                    <p>Amazon Nova 2 Lite</p>
+                    <p>Amazon Nova 2 Omni</p>
+                    <p>Titan Embeddings</p>
+                    <p>Amazon Polly</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CityPulse. Built for Amazon Nova Hackathon.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Panel -->
+    <div class="notification-panel" id="notificationPanel">
+        <div class="notification-header">
+            <h3>Notifications</h3>
+            <button class="close-btn" id="closeNotifications">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="notification-list" id="notificationList">
+            <!-- Loaded dynamically -->
+        </div>
+    </div>
+
+    <!-- Google Sign-In -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -125,3 +125,62 @@ sample_images/*.jpg
 sample_images/*.png
 sample_images/*.jpeg
 !sample_images/README.md
+
+# Unnecessary documentation files (deployment guides)
+DEPLOYMENT_*.md
+DEPLOY_*.txt
+DEPLOY_*.md
+FIXES_*.md
+PRODUCTION_*.md
+QUICK_*.md
+FINAL_*.md
+READY_*.md
+*_COMPLETE.md
+*_STATUS.md
+*_SUMMARY.md
+*_GUIDE.md
+*_CHECKLIST.md
+HANDOFF_*.md
+INTEGRATION_*.md
+WHATS_NEXT.md
+DEMO_COMPARISON.md
+GITHUB_PUSH_COMPLETE.md
+GITHUB_PUSH_GUIDE.md
+PUSH_TO_GITHUB_NOW.txt
+
+# Keep only essential docs
+!README.md
+!LICENSE
+
+# Frontend demo (old prototype)
+frontend/demo/
+frontend/CityPlus-prototype/
+
+# Test files
+test_*.py
+!backend/test_api.py
+
+# Backup and temporary
+*.bak
+*.backup
+*.old
+
+# All other markdown files except README
+*.md
+!README.md
+!LICENSE
+!agents/README.md
+!frontend/app/README.md
+!backend/README.md
+
+# All text files
+*.txt
+!requirements.txt
+!backend/requirements.txt
+!backend/requirements-dev.txt
+!runtime.txt
+!backend/runtime.txt
+
+# Shell scripts (keep only if needed)
+push_to_github.sh
+push_to_github.bat

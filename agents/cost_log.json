@@ -347,5 +347,85 @@
     "operation": "ui_automation",
     "tokens_used": 0,
     "estimated_cost": 0.0
+  },
+  {
+    "agent": "voice_qa_realtime",
+    "timestamp": "2026-03-16T15:56:52.410675",
+    "model": "Nova 2 Lite + Amazon Polly Neural",
+    "operation": "voice_qa",
+    "tokens_used": 0,
+    "estimated_cost": 0.0008
+  },
+  {
+    "agent": "voice_qa_realtime",
+    "timestamp": "2026-03-16T15:56:52.941566",
+    "model": "Nova 2 Lite + Amazon Polly Neural",
+    "operation": "voice_qa",
+    "tokens_used": 0,
+    "estimated_cost": 0.0016
+  },
+  {
+    "agent": "voice_qa_realtime",
+    "timestamp": "2026-03-16T15:56:53.462399",
+    "model": "Nova 2 Lite + Amazon Polly Neural",
+    "operation": "voice_qa",
+    "tokens_used": 0,
+    "estimated_cost": 0.0024000000000000002
+  },
+  {
+    "agent": "voice_qa_realtime",
+    "timestamp": "2026-03-16T15:58:41.913651",
+    "model": "Nova 2 Lite + Amazon Polly Neural",
+    "operation": "voice_qa",
+    "tokens_used": 0,
+    "estimated_cost": 0.0008
+  },
+  {
+    "agent": "voice_qa_realtime",
+    "timestamp": "2026-03-16T15:58:42.428036",
+    "model": "Nova 2 Lite + Amazon Polly Neural",
+    "operation": "voice_qa",
+    "tokens_used": 0,
+    "estimated_cost": 0.0016
+  },
+  {
+    "agent": "voice_qa_realtime",
+    "timestamp": "2026-03-16T15:58:42.939436",
+    "model": "Nova 2 Lite + Amazon Polly Neural",
+    "operation": "voice_qa",
+    "tokens_used": 0,
+    "estimated_cost": 0.0024000000000000002
+  },
+  {
+    "agent": "voice_qa_realtime",
+    "timestamp": "2026-03-16T17:00:04.406496",
+    "model": "Nova 2 Lite + Amazon Polly Neural",
+    "operation": "voice_qa",
+    "tokens_used": 0,
+    "estimated_cost": 0.0008
+  },
+  {
+    "agent": "voice_qa_realtime",
+    "timestamp": "2026-03-16T17:00:04.937316",
+    "model": "Nova 2 Lite + Amazon Polly Neural",
+    "operation": "voice_qa",
+    "tokens_used": 0,
+    "estimated_cost": 0.0016
+  },
+  {
+    "agent": "voice_qa_realtime",
+    "timestamp": "2026-03-16T17:00:05.457043",
+    "model": "Nova 2 Lite + Amazon Polly Neural",
+    "operation": "voice_qa",
+    "tokens_used": 0,
+    "estimated_cost": 0.0024000000000000002
+  },
+  {
+    "agent": "simple_speech",
+    "timestamp": "2026-03-16T23:27:19.497661",
+    "model": "Nova 2 Lite + Polly Neural",
+    "operation": "text_to_speech",
+    "tokens_used": 126,
+    "estimated_cost": 0.00569854
   }
 ]

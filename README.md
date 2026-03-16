@@ -1,293 +1,459 @@
-# CityPulse - AI-Powered Civic Intelligence Platform
+# 🌆 CityPulse - Hyperlocal Community Intelligence Platform
 
-[![AWS](https://img.shields.io/badge/AWS-Bedrock-orange)](https://aws.amazon.com/bedrock/)
-[![Nova](https://img.shields.io/badge/Amazon-Nova-blue)](https://aws.amazon.com/ai/generative-ai/nova/)
-[![Python](https://img.shields.io/badge/Python-3.10+-green)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+> **Amazon Nova Hackathon 2026** | Agentic AI + Multimodal Understanding + UI Automation
 
-**CityPulse** is an autonomous AI agent system for Mumbai civic intelligence, powered by Amazon Nova models and AWS services.
+[![Built with Amazon Nova](https://img.shields.io/badge/Built%20with-Amazon%20Nova-FF9900?style=for-the-badge&logo=amazon-aws)](https://aws.amazon.com/bedrock/nova/)
+[![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)](https://python.org)
+[![Flask](https://img.shields.io/badge/Flask-3.0-black?style=for-the-badge&logo=flask)](https://flask.palletsprojects.com/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-## 🏆 Hackathon Scores
+**CityPulse** is an AI-powered hyperlocal intelligence platform that monitors your neighborhood's digital footprint and provides actionable insights that actually affect your daily life. Built entirely with Amazon Nova AI models, it combines agentic AI, multimodal understanding, and UI automation to deliver proactive community intelligence.
 
-| Category | Score | Implementation |
-|----------|-------|----------------|
-| **Agentic AI** | 10/10 | 11 autonomous agents with orchestration |
-| **Multimodal** | 10/10 | Text, images, embeddings, voice |
-| **Voice AI** | 9/10 | Nova Lite Q&A + Polly Neural TTS |
-| **UI Automation** | 8/10 | Selenium headless browser automation |
-
-**Total: 37/40 (92.5%)**
+[🎥 Demo Video](#) | [📖 Documentation](docs/) | [🚀 Live Demo](#)
 
 ---
 
-## 🚀 Quick Start
+## 🎯 The Unique Angle
+
+Unlike traditional chatbots or document processors, CityPulse is a **proactive intelligence gathering system** that:
+
+- 🤖 **Monitors** your neighborhood 24/7 using autonomous AI agents
+- 🧠 **Analyzes** multi-modal data (text, images, permits, social media)
+- 📊 **Synthesizes** insights from disparate sources
+- 🔔 **Alerts** you to relevant changes in real-time
+- 🎙️ **Briefs** you daily via voice with personalized updates
+
+### Why This Is Different
+
+✅ **Truly Novel Use Case** - Not another chatbot or RAG system  
+✅ **Multi-Agent Orchestration** - 5 specialized AI agents working in parallel  
+✅ **All Nova Capabilities** - Leverages every Amazon Nova model  
+✅ **Real-World Impact** - Actionable intelligence for daily life  
+✅ **Proactive, Not Reactive** - Agents work autonomously, not on-demand
+
+---
+
+## 🏗️ Architecture
+
+### Multi-Agent System
+
+```
+CityPulse Multi-Agent System
+├── 🏢 Permit Monitor Agent (Nova Act)
+│   └── Scrapes city building permits, liquor licenses, zoning changes
+│
+├── 👥 Social Listening Agent (Nova Act)
+│   └── Monitors community Facebook groups, local subreddits, NextDoor
+│
+├── 📰 News Synthesis Agent (Nova 2 Lite)
+│   └── Aggregates local news, identifies trends, extracts insights
+│
+├── 📸 Visual Intelligence Agent (Nova 2 Omni)
+│   └── Analyzes photos: construction sites, events, safety issues
+│
+└── 🎙️ Voice Briefing Agent (Nova 2 Lite + Polly)
+    └── Daily personalized neighborhood briefing with audio
+```
+
+### Technology Stack
+
+**AI & ML:**
+- 🧠 **Amazon Nova 2 Lite** - Real-time reasoning and text generation
+- 🎨 **Amazon Nova 2 Omni** - Multimodal understanding (text + images)
+- 🤖 **Amazon Nova Act** - UI automation and web scraping
+- 🎙️ **Amazon Polly Neural TTS** - Natural voice synthesis
+- 🔍 **Amazon Titan Embeddings** - Vector search for RAG
+- 📊 **FAISS** - Fast similarity search
+
+**Backend:**
+- 🐍 Python 3.11
+- 🌐 Flask 3.0 (REST API)
+- 🔄 Gunicorn (Production server)
+- 📦 Boto3 (AWS SDK)
+
+**Frontend:**
+- 💻 Vanilla JavaScript (No framework overhead)
+- 🎨 Modern CSS with gradients and animations
+- 📱 Fully responsive design
+- 🗺️ Leaflet.js (Interactive maps)
+- 🎮 Three.js (3D permit visualization)
+
+**Infrastructure:**
+- ☁️ AWS Bedrock (Nova models)
+- 🚀 Heroku (Backend deployment)
+- ⚡ Vercel (Frontend deployment)
+
+---
+
+## ✨ Features
+
+### 🏠 For Residents
+
+#### 📊 User Dashboard
+- Track your engagement across all features
+- View recent activity history
+- Personalized stats and insights
+- **Tech:** LocalStorage API, Real-time updates
+
+#### 🏗️ 3D Permits Visualization
+- Interactive 3D view of construction permits
+- Click buildings to see permit details
+- Filter by type, status, and location
+- **Tech:** Three.js, WebGL, Nova Act for data collection
+
+#### 🔔 Smart Alerts
+- Real-time safety notifications
+- New business openings nearby
+- Road closures and construction updates
+- Community events and meetings
+- **Tech:** Nova 2 Lite for alert generation, Leaflet maps
+
+#### 👥 Community Pulse
+- Trending topics in your neighborhood
+- Sentiment analysis of community discussions
+- Key concerns and celebrations
+- Interactive topic exploration
+- **Tech:** Nova 2 Lite for NLP, Social media aggregation
+
+#### 💰 Investment Insights
+- Trending neighborhoods for investment
+- Development activity heatmaps
+- Property value indicators
+- Commercial vs residential trends
+- **Tech:** Nova 2 Lite for analysis, Data visualization
+
+#### ☀️ Morning Briefing
+- Personalized daily audio briefing
+- News, permits, and community updates
+- Listen on-the-go
+- **Tech:** Nova 2 Lite + Amazon Polly Neural TTS
+
+#### 🎙️ Voice AI Assistant
+- Ask questions in natural language
+- Voice input with browser speech recognition
+- Audio responses with Polly TTS
+- RAG-powered answers from local data
+- **Tech:** Nova 2 Lite, Polly, FAISS, Titan Embeddings
+
+---
+
+## 🎨 Where Each Technology Is Used
+
+### Amazon Nova 2 Lite
+**Location:** Backend agents + Voice AI  
+**Purpose:** Text generation, reasoning, analysis
+- `agents/features/community_pulse_nova.py` - Community sentiment analysis
+- `agents/features/safety_intelligence_nova.py` - Safety alert generation
+- `agents/features/investment_insights_nova.py` - Investment analysis
+- `agents/voice_qa_realtime.py` - Voice Q&A responses
+- `agents/voice_briefing_nova.py` - Morning briefing generation
+
+### Amazon Nova 2 Omni (Multimodal)
+**Location:** Image analysis agents  
+**Purpose:** Analyze photos from permits, social media, news
+- `agents/image_analysis_nova.py` - Construction site analysis
+- `agents/features/community_pulse_nova.py` - Social media image analysis
+- Visual intelligence for safety concerns
+
+### Amazon Nova Act
+**Location:** Web scraping agents  
+**Purpose:** Automated data collection from websites
+- `agents/permit-monitor/permit_monitor_real.py` - BMC permit scraping
+- `agents/social-listening/social_listener_nova.py` - Social media monitoring
+- `agents/nova_act_permit_checker.py` - Automated permit checking
+
+### Amazon Polly Neural TTS
+**Location:** Voice features  
+**Purpose:** Natural voice synthesis
+- `backend/api_v2.py` - `/api/voice/ask` endpoint
+- `agents/voice_briefing_nova.py` - Morning briefing audio
+- `agents/speech_to_speech_simple.py` - Voice responses
+
+### Amazon Titan Embeddings
+**Location:** RAG system  
+**Purpose:** Vector embeddings for semantic search
+- `agents/rag_qa_system.py` - Document embeddings
+- `agents/rag_api.py` - Fast RAG API
+
+### FAISS (Facebook AI Similarity Search)
+**Location:** RAG system  
+**Purpose:** Fast vector similarity search
+- `agents/rag_qa_system.py` - Semantic search over local data
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
-- Python 3.10+
+
+- Python 3.11+
 - AWS Account with Bedrock access
-- AWS CLI configured (`aws configure`)
+- AWS credentials configured
+- Node.js (optional, for development)
 
 ### Installation
 
-```bash
-# Clone repository
-git clone https://github.com/yourusername/citypulse-amazon-nova.git
-cd citypulse-amazon-nova
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Hritik123789/amazon_nova_2.git
+   cd amazon_nova_2
+   ```
 
-# Install dependencies
-pip install -r requirements.txt
+2. **Set up backend**
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   cp .env.example .env
+   # Edit .env with your AWS credentials
+   ```
 
-# Set AWS region
-export AWS_REGION=us-east-1  # or set AWS_REGION=us-east-1 on Windows
+3. **Run agents to generate data**
+   ```bash
+   cd agents
+   python run_all_agents.py --parallel
+   ```
+
+4. **Start backend server**
+   ```bash
+   cd backend
+   python api_v2.py
+   ```
+
+5. **Open frontend**
+   ```bash
+   cd frontend/app
+   # Open index.html in browser
+   # Or use: python -m http.server 8000
+   ```
+
+### Configuration
+
+**Backend Environment Variables** (`.env`):
+```env
+FLASK_ENV=production
+SECRET_KEY=your-secret-key
+AWS_ACCESS_KEY_ID=your-aws-key
+AWS_SECRET_ACCESS_KEY=your-aws-secret
+AWS_REGION=us-east-1
+CORS_ORIGINS=*
 ```
 
-### Run All Agents (Parallel Mode - 27 seconds)
-
-```bash
-cd agents
-python run_all_agents.py --parallel
+**Frontend Configuration** (`frontend/app/js/config.js`):
+```javascript
+BASE_URL: 'http://localhost:5000'  // Change for production
 ```
-
-### Run Individual Agents
-
-```bash
-# Voice Q&A with Polly TTS
-python voice_qa_realtime.py
-
-# UI Automation (Selenium)
-python permit-monitor/permit_monitor_real.py
-
-# Community Pulse with Embeddings
-python features/community_pulse_enhanced.py
-```
-
----
-
-## 📊 Architecture
-
-### Phase 1: Data Collection (5 Agents)
-1. **News Synthesis** - Nova 2 Lite analyzes Mumbai news
-2. **Permit Monitor** - Selenium UI automation for MahaRERA
-3. **BMC Ward Monitor** - Ward-level permit tracking
-4. **Social Listening** - Reddit sentiment analysis
-5. **Visual Intelligence** - Nova 2 Omni image analysis
-
-### Phase 2: User Features (6 Agents)
-6. **Morning Briefing** - Voice briefing with Polly
-7. **Smart Alerts** - Personalized notifications
-8. **Safety Intelligence** - Risk assessment
-9. **Investment Insights** - Neighborhood analysis
-10. **Community Pulse Enhanced** - Titan embeddings + topic clustering
-11. **Voice Q&A** - Real-time Q&A with Polly TTS
-
----
-
-## 🛠️ Technology Stack
-
-### AWS Services
-- **Amazon Bedrock**: Nova 2 Lite, Nova 2 Omni, Titan Embeddings
-- **Amazon Polly**: Neural TTS (Matthew voice)
-- **AWS IAM**: Secure credential management
-
-### Models
-- **Nova 2 Lite** (`us.amazon.nova-lite-v1:0`) - Text analysis, Q&A
-- **Nova 2 Omni** (`us.amazon.nova-omni-v1:0`) - Image understanding
-- **Titan Embeddings** (`amazon.titan-embed-text-v2:0`) - Semantic clustering
-- **Amazon Polly Neural** - Voice synthesis
-
-### Additional Tech
-- **Selenium + ChromeDriver**: UI automation
-- **BeautifulSoup**: HTML parsing
-- **Reddit JSON API**: Social data
-- **Python 3.10+**: Core language
 
 ---
 
 ## 📁 Project Structure
 
 ```
-citypulse-amazon-nova/
-├── agents/
-│   ├── run_all_agents.py              # Master orchestrator
-│   ├── voice_qa_realtime.py           # Voice Q&A (NEW)
-│   ├── nova_act_permit_checker.py     # Nova Act (prepared)
-│   ├── features/
-│   │   ├── community_pulse_enhanced.py # Embeddings + clustering (NEW)
-│   │   ├── morning_briefing_nova.py
-│   │   ├── smart_alerts_nova.py
+citypulse/
+├── agents/                      # AI Agents
+│   ├── features/               # Feature-specific agents
+│   │   ├── community_pulse_nova.py
 │   │   ├── safety_intelligence_nova.py
 │   │   └── investment_insights_nova.py
-│   ├── permit-monitor/
-│   │   ├── permit_monitor_real.py     # Selenium UI automation
-│   │   └── bmc_ward_monitor.py
-│   ├── social-listening/
-│   │   └── social_listener_nova.py
-│   ├── news-synthesis/
-│   │   └── local_news_agent_nova.py
-│   ├── image_analysis_nova.py
-│   ├── utils/
-│   │   └── __init__.py                # Shared utilities
-│   └── data/                          # Output JSON files
-├── frontend/
-│   └── CityPlus-prototype/            # HTML/CSS/JS prototype
-├── docs/
-│   ├── HACKATHON_FINAL_STATUS.md      # Complete project summary
-│   ├── UI_AUTOMATION_COMPLETE.md      # UI automation details
-│   └── VOICE_AI_STATUS.md             # Voice AI implementation
-├── requirements.txt
-└── README.md
+│   ├── permit-monitor/         # Permit scraping
+│   ├── social-listening/       # Social media monitoring
+│   ├── rag_qa_system.py       # RAG Q&A system
+│   ├── voice_qa_realtime.py   # Voice AI
+│   └── run_all_agents.py      # Orchestrator
+│
+├── backend/                    # Flask API
+│   ├── api_v2.py              # Main API
+│   ├── config.py              # Configuration
+│   └── requirements.txt       # Dependencies
+│
+├── frontend/app/              # Web Application
+│   ├── index.html            # Home page
+│   ├── dashboard.html        # User dashboard
+│   ├── permits.html          # 3D permits view
+│   ├── alerts.html           # Smart alerts
+│   ├── community.html        # Community pulse
+│   ├── briefing.html         # Morning briefing
+│   ├── voice.html            # Voice AI
+│   ├── css/main.css          # Styles
+│   └── js/                   # JavaScript
+│       ├── config.js         # API config
+│       ├── api.js            # API client
+│       ├── permits.js        # 3D visualization
+│       ├── alerts.js         # Alerts + maps
+│       ├── community.js      # Community features
+│       ├── voice.js          # Voice AI
+│       └── dashboard.js      # Dashboard
+│
+└── docs/                      # Documentation
 ```
 
 ---
 
-## 💰 Cost Efficiency
+## 🎯 Key Innovations
 
-### Per-Run Costs
-- Nova 2 Lite: $0.015
-- Nova 2 Omni: $0.005
-- Titan Embeddings: $0.003
-- Polly TTS: $0.003
-- **Total**: ~$0.026 per full run
+### 1. Multi-Agent Orchestration
+- **5 specialized agents** working in parallel
+- **Autonomous operation** - agents run on schedule
+- **Data synthesis** - combining insights from multiple sources
+- **Conflict resolution** - handling contradictory information
 
-### Budget Status
-- **Allocated**: $100 AWS credits
-- **Used**: <$1
-- **Remaining**: $99+
-- **Runs Possible**: 3,800+ runs
+### 2. Multimodal Intelligence
+- **Text analysis** - News, social media, permits
+- **Image analysis** - Construction sites, events, safety
+- **Voice interaction** - Natural language Q&A
+- **Spatial data** - Maps, locations, proximity
 
----
+### 3. Proactive Intelligence
+- **Not reactive** - Agents work 24/7, not on-demand
+- **Predictive** - Identifies trends before they're obvious
+- **Personalized** - Tailored to your neighborhood
+- **Actionable** - Insights you can act on
 
-## ⚡ Performance
-
-- **Sequential**: 73.5 seconds
-- **Parallel**: 27.6 seconds
-- **Speedup**: 2.66x
-
----
-
-## 📦 Output Files
-
-All data saved to `agents/data/`:
-
-| File | Description |
-|------|-------------|
-| `news.json` | Mumbai news articles |
-| `social.json` | Reddit sentiment analysis |
-| `permits.json` | Building permits (UI automation) |
-| `bmc_permits.json` | Ward-level permits |
-| `images.json` | Infrastructure image analysis |
-| `morning_briefing.json` | Daily briefing |
-| `smart_alerts.json` | Personalized alerts |
-| `safety_alerts.json` | Risk assessments |
-| `investment_insights.json` | Neighborhood trends |
-| `community_pulse.json` | Topic clusters + relationships |
-| `voice_qa_response.json` | Q&A with audio paths |
-| `voice_response.mp3` | TTS audio output |
+### 4. Real-World Impact
+- **Safety** - Early warning of hazards
+- **Investment** - Identify opportunities
+- **Community** - Stay connected
+- **Convenience** - Know what's happening
 
 ---
 
-## 🎯 Key Features
+## 📊 API Endpoints
 
-### 1. Agentic AI (10/10)
-- 11 autonomous agents
-- Parallel execution (2.66x faster)
-- Cost tracking ($0.02-0.03 per run)
-- Automatic retry + fallback logic
-- Thread-safe logging
-
-### 2. Multimodal (10/10)
-- **Text**: News, social posts, permits
-- **Images**: Infrastructure analysis via Nova Omni
-- **Embeddings**: Titan for topic clustering
-- **Voice**: Polly TTS for audio output
-
-### 3. Voice AI (9/10)
-- Real-time Q&A with Nova 2 Lite
-- Amazon Polly Neural TTS (high quality)
-- MP3 audio output (60-106 KB per response)
-- Cost: $0.013 for 3 Q&A cycles
-
-### 4. UI Automation (8/10)
-- Selenium WebDriver (headless Chrome)
-- JavaScript rendering support
-- Dynamic element waiting
-- MahaRERA project extraction
-- Retry logic + graceful fallback
-
----
-
-## 🔧 Configuration
-
-### AWS IAM Policies Required
-1. Custom Bedrock policy (Nova models access)
-2. `AmazonPollyFullAccess`
-3. Nova Act policy (optional, for future use)
-
-### Environment Variables
-```bash
-export AWS_REGION=us-east-1
-export AWS_ACCESS_KEY_ID=your_key
-export AWS_SECRET_ACCESS_KEY=your_secret
-```
-
-Or use `aws configure` to set credentials.
-
----
-
-## 📖 Documentation
-
-- [Hackathon Final Status](HACKATHON_FINAL_STATUS.md) - Complete project summary
-- [UI Automation Details](UI_AUTOMATION_COMPLETE.md) - Selenium implementation
-- [Voice AI Status](VOICE_AI_STATUS.md) - Voice Q&A + TTS
-- [Performance Comparison](PERFORMANCE_COMPARISON.md) - Sequential vs Parallel
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/health` | GET | Health check |
+| `/api/alerts` | GET | All alerts |
+| `/api/community` | GET | Community pulse data |
+| `/api/safety` | GET | Safety alerts |
+| `/api/investment` | GET | Investment insights |
+| `/api/permits` | GET | Building permits |
+| `/api/briefing` | GET | Morning briefing |
+| `/api/voice/ask` | POST | Voice Q&A |
+| `/api/audio/<file>` | GET | Audio files |
 
 ---
 
 ## 🎬 Demo
 
-### For Judges
-1. **Run all agents**: `python run_all_agents.py --parallel` (27 seconds)
-2. **Voice Q&A demo**: `python voice_qa_realtime.py` (generates MP3)
-3. **UI automation**: `python permit-monitor/permit_monitor_real.py` (Selenium)
-4. **Check outputs**: `agents/data/*.json` (10+ files)
+### Screenshots
+
+**Home Page**
+![Home](docs/screenshots/home.png)
+
+**3D Permits Visualization**
+![Permits](docs/screenshots/permits.png)
+
+**Smart Alerts with Map**
+![Alerts](docs/screenshots/alerts.png)
+
+**Community Pulse**
+![Community](docs/screenshots/community.png)
+
+**Voice AI Assistant**
+![Voice](docs/screenshots/voice.png)
 
 ---
 
-## 🚧 Future Enhancements
+## 🏆 Amazon Nova Hackathon Submission
 
-1. **Nova Act Integration**: When available in India region
-2. **Real-time Streaming**: WebSocket updates
-3. **Mobile App**: React Native frontend
-4. **Database**: PostgreSQL for historical data
-5. **API Layer**: FastAPI for frontend integration
-6. **Monitoring**: CloudWatch dashboards
+### Category
+**Agentic AI + Multimodal Understanding + UI Automation**
+
+### What Makes This Unique
+
+1. **Comprehensive Nova Usage**
+   - ✅ Nova 2 Lite for reasoning
+   - ✅ Nova 2 Omni for multimodal
+   - ✅ Nova Act for automation
+   - ✅ Polly for voice
+   - ✅ Titan for embeddings
+
+2. **Novel Use Case**
+   - Not a chatbot
+   - Not document processing
+   - Truly proactive intelligence
+
+3. **Real-World Application**
+   - Solves actual problems
+   - Provides daily value
+   - Scalable to any city
+
+4. **Technical Excellence**
+   - Multi-agent orchestration
+   - Production-ready code
+   - Comprehensive documentation
+   - Deployed and accessible
 
 ---
 
-## 📄 License
+## 🛠️ Development
+
+### Running Agents
+
+```bash
+# Run all agents in parallel
+python agents/run_all_agents.py --parallel
+
+# Run specific agent
+python agents/features/community_pulse_nova.py
+
+# Build RAG cache
+python agents/rag_api.py "test question"
+```
+
+### Testing
+
+```bash
+# Test backend endpoints
+cd backend
+python test_api.py
+
+# Test specific endpoint
+curl http://localhost:5000/api/alerts
+```
+
+### Deployment
+
+See [DEPLOYMENT_GUIDE_FINAL.md](DEPLOYMENT_GUIDE_FINAL.md) for detailed instructions.
+
+**Quick Deploy:**
+```bash
+# Backend (Heroku)
+heroku create citypulse-backend
+git subtree push --prefix backend heroku main
+
+# Frontend (Vercel)
+vercel --prod
+```
+
+---
+
+## 📝 License
 
 MIT License - see [LICENSE](LICENSE) file for details
 
 ---
 
-## 👤 Author
+## 👥 Team
 
-**Solo Developer**
-- Timeline: 1 week
-- AWS Credits Used: <$1 of $100
-- Lines of Code: 5,000+
-- Models Used: 4 (Nova Lite, Nova Omni, Titan Embeddings, Polly)
+Built with ❤️ for the Amazon Nova Hackathon 2026
 
 ---
 
 ## 🙏 Acknowledgments
 
-- Amazon Web Services for Bedrock and Nova models
-- AWS Hackathon team for the opportunity
-- Mumbai civic data sources
+- Amazon Web Services for Amazon Nova AI models
+- Amazon Bedrock team for the amazing platform
+- Open source community for tools and libraries
 
 ---
 
-**Status**: ✅ Ready for Demo
+## 📧 Contact
 
-🎉 **Hackathon Complete!**
+For questions or feedback:
+- GitHub Issues: [Create an issue](https://github.com/Hritik123789/amazon_nova_2/issues)
+- Email: [your-email@example.com]
+
+---
+
+**⭐ If you find this project interesting, please star the repository!**
+
