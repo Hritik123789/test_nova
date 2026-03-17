@@ -364,10 +364,10 @@ def voice_ask():
         
         if 'trending' in question_lower or 'topic' in question_lower or 'community' in question_lower:
             sources.append({
-                'source': 'community_pulse',
-                'title': 'Community Pulse Analysis',
-                'url': 'http://localhost:8000/community.html',
-                'description': 'AI-powered analysis of social media and community discussions'
+                'source': 'reddit',
+                'title': 'Mumbai Community Discussions',
+                'url': 'https://www.reddit.com/r/mumbai/',
+                'description': 'Community discussions and local insights'
             })
             sources.append({
                 'source': 'social_media',
@@ -378,10 +378,10 @@ def voice_ask():
         
         if 'safety' in question_lower or 'alert' in question_lower:
             sources.append({
-                'source': 'safety_alerts',
-                'title': 'Safety Intelligence System',
-                'url': 'http://localhost:8000/alerts.html',
-                'description': 'Real-time safety monitoring and alerts'
+                'source': 'news',
+                'title': 'Mumbai Local News',
+                'url': 'https://www.hindustantimes.com/cities/mumbai-news',
+                'description': 'Latest news and safety updates'
             })
             sources.append({
                 'source': 'news',
@@ -392,10 +392,10 @@ def voice_ask():
         
         if 'investment' in question_lower or 'neighborhood' in question_lower:
             sources.append({
-                'source': 'investment_insights',
-                'title': 'Investment Insights Analysis',
-                'url': 'http://localhost:8000/community.html',
-                'description': 'Development trends and investment opportunities'
+                'source': 'realestate',
+                'title': 'Mumbai Real Estate Trends',
+                'url': 'https://www.99acres.com/mumbai-real-estate',
+                'description': 'Property market analysis and trends'
             })
             sources.append({
                 'source': 'permits',
@@ -405,12 +405,6 @@ def voice_ask():
             })
         
         if 'permit' in question_lower or 'construction' in question_lower or 'building' in question_lower:
-            sources.append({
-                'source': 'permits',
-                'title': 'Building Permits Database',
-                'url': 'http://localhost:8000/permits.html',
-                'description': 'MahaRERA and BMC permit records'
-            })
             sources.append({
                 'source': 'maharera',
                 'title': 'MahaRERA Portal',
@@ -427,10 +421,16 @@ def voice_ask():
         # Add general sources if no specific sources
         if not sources:
             sources.append({
-                'source': 'citypulse',
-                'title': 'CityPulse AI Platform',
-                'url': 'http://localhost:8000/',
-                'description': 'Multi-source Mumbai intelligence platform'
+                'source': 'reddit',
+                'title': 'Mumbai Community Discussions',
+                'url': 'https://www.reddit.com/r/mumbai/',
+                'description': 'Community discussions and local insights'
+            })
+            sources.append({
+                'source': 'news',
+                'title': 'Mumbai Local News',
+                'url': 'https://www.hindustantimes.com/cities/mumbai-news',
+                'description': 'Latest news and updates from Mumbai'
             })
         
         # Try to generate audio (but don't block on it)
@@ -450,11 +450,30 @@ def voice_ask():
             
             polly = boto3.client('polly', region_name=os.getenv('AWS_REGION', 'us-east-1'), config=config)
             
-            # Clean answer text for TTS
+            # Clean answer text for TTS - remove underscores and technical formatting
             import re
-            clean_answer = re.sub(r'\[\d+\]', '', answer)
+            clean_answer = re.sub(r'\[\d+\]', '', answer)  # Remove citations
             clean_answer = re.sub(r'\*\*', '', clean_answer)  # Remove markdown bold
+            clean_answer = re.sub(r'_', ' ', clean_answer)  # Replace underscores with spaces
+            clean_answer = re.sub(r'([a-z])([A-Z])', r'\1 \2', clean_answer)  # Add spaces in camelCase
+            clean_answer = re.sub(r'\s+', ' ', clean_answer)  # Normalize whitespace
             clean_answer = clean_answer.strip()
+            
+            # Replace technical terms with more natural speech
+            replacements = {
+                'investment insights': 'investment opportunities',
+                'community pulse': 'community trends',
+                'safety intelligence': 'safety updates',
+                'trend score': 'popularity rating',
+                'priority score': 'importance level',
+                'engagement weighted': 'based on community interest',
+                'API': 'A P I',
+                'BMC': 'B M C',
+                'MahaRERA': 'Maha RERA'
+            }
+            
+            for old, new in replacements.items():
+                clean_answer = clean_answer.replace(old, new)
             
             # Limit text length for faster generation
             if len(clean_answer) > 800:

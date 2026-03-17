@@ -197,29 +197,37 @@ async function handleVoiceQuery(question) {
             
             // Show sources if available
             if (data.sources && data.sources.length > 0) {
-                const sourcesHtml = '<div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">' +
-                    '<div style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem; color: var(--gray);">Sources:</div>' +
-                    data.sources.map((source, idx) => {
-                        const sourceType = source.source || 'unknown';
-                        const sourceTitle = source.title || 'Source';
-                        const sourceUrl = source.url || '';
-                        
-                        // Create clickable link if URL exists
-                        if (sourceUrl) {
-                            return `<div style="font-size: 0.75rem; color: var(--gray); margin-bottom: 0.25rem;">
-                                [${idx + 1}] <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer" 
-                                    style="color: #6366f1; text-decoration: none; hover: text-decoration: underline;">
-                                    ${sourceTitle}
-                                </a> <span style="color: var(--gray); font-size: 0.7rem;">(${sourceType})</span>
-                            </div>`;
-                        } else {
-                            return `<div style="font-size: 0.75rem; color: var(--gray); margin-bottom: 0.25rem;">
-                                [${idx + 1}] ${sourceTitle} <span style="color: var(--gray); font-size: 0.7rem;">(${sourceType})</span>
-                            </div>`;
-                        }
-                    }).join('') +
-                    '</div>';
-                responseText.innerHTML += sourcesHtml;
+                // Filter out localhost URLs for production
+                const validSources = data.sources.filter(source => {
+                    const url = source.url || '';
+                    return !url.includes('localhost') && !url.includes('127.0.0.1');
+                });
+                
+                if (validSources.length > 0) {
+                    const sourcesHtml = '<div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">' +
+                        '<div style="font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem; color: var(--gray);">Sources:</div>' +
+                        validSources.map((source, idx) => {
+                            const sourceType = source.source || 'unknown';
+                            const sourceTitle = source.title || 'Source';
+                            const sourceUrl = source.url || '';
+                            
+                            // Create clickable link if URL exists
+                            if (sourceUrl) {
+                                return `<div style="font-size: 0.75rem; color: var(--gray); margin-bottom: 0.25rem;">
+                                    [${idx + 1}] <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer" 
+                                        style="color: #6366f1; text-decoration: none; hover: text-decoration: underline;">
+                                        ${sourceTitle}
+                                    </a> <span style="color: var(--gray); font-size: 0.7rem;">(${sourceType})</span>
+                                </div>`;
+                            } else {
+                                return `<div style="font-size: 0.75rem; color: var(--gray); margin-bottom: 0.25rem;">
+                                    [${idx + 1}] ${sourceTitle} <span style="color: var(--gray); font-size: 0.7rem;">(${sourceType})</span>
+                                </div>`;
+                            }
+                        }).join('') +
+                        '</div>';
+                    responseText.innerHTML += sourcesHtml;
+                }
             }
             
             // Update play button
