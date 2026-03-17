@@ -144,6 +144,9 @@ function showTopicDetails(index) {
     document.body.appendChild(modal);
     selectedTopic = topic;
     
+    // Make modal visible
+    setTimeout(() => modal.classList.add('active'), 10);
+    
     // Add event listener for close button
     modal.querySelector('[data-action="close-topic-modal"]').addEventListener('click', closeTopicModal);
     
@@ -224,7 +227,8 @@ function generateTopicSources(topic) {
 function closeTopicModal() {
     const modal = document.querySelector('.topic-modal');
     if (modal) {
-        modal.remove();
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
     }
     selectedTopic = null;
 }
@@ -332,6 +336,9 @@ function showConcernDetails(index) {
 
     document.body.appendChild(modal);
     
+    // Make modal visible
+    setTimeout(() => modal.classList.add('active'), 10);
+    
     // Add event listener for close button
     modal.querySelector('[data-action="close-concern-modal"]').addEventListener('click', closeConcernModal);
     
@@ -380,7 +387,8 @@ function generateConcernSources(concern) {
 function closeConcernModal() {
     const modal = document.querySelector('.concern-modal');
     if (modal) {
-        modal.remove();
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
     }
 }
 
