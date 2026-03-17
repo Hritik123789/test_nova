@@ -244,8 +244,8 @@ async function loadNotifications() {
         const alerts = data.alerts || [];
         const recentAlerts = alerts.slice(0, 5);
 
-        notificationList.innerHTML = recentAlerts.map(alert => `
-            <div class="notification-item">
+        notificationList.innerHTML = recentAlerts.map((alert, index) => `
+            <div class="notification-item clickable" data-alert-index="${index}">
                 <div style="display: flex; align-items: start; gap: 1rem;">
                     <div style="width: 40px; height: 40px; border-radius: 10px; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                         <i class="fas fa-${getSourceIcon(alert.source)}"></i>
@@ -258,10 +258,30 @@ async function loadNotifications() {
                 </div>
             </div>
         `).join('');
+
+        // Add click event listeners to notification items
+        document.querySelectorAll('.notification-item[data-alert-index]').forEach(item => {
+            item.addEventListener('click', (e) => {
+                const index = parseInt(item.getAttribute('data-alert-index'));
+                handleNotificationClick(index);
+            });
+        });
     } catch (error) {
         console.error('Error loading notifications:', error);
         notificationList.innerHTML = '<p style="text-align: center; color: var(--gray); padding: 2rem;">Unable to load notifications.</p>';
     }
+}
+
+// Handle notification click
+function handleNotificationClick(index) {
+    // Close notification panel
+    const notificationPanel = document.getElementById('notificationPanel');
+    if (notificationPanel) {
+        notificationPanel.classList.remove('active');
+    }
+
+    // Navigate to alerts page
+    window.location.href = 'alerts.html';
 }
 
 // Utility functions
