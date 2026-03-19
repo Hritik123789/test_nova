@@ -105,7 +105,7 @@ Answer in 2-3 clear sentences. Be specific and helpful. If data is unavailable, 
 
         try:
             response = self.bedrock.invoke_model(
-                modelId='amazon.nova-2-sonic-v1:0',
+                modelId='amazon.nova-sonic-v1:0',
                 contentType='application/json',
                 accept='application/json',
                 body=json.dumps({

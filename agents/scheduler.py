@@ -57,7 +57,7 @@ def run_all_agents():
     
     logger.info("="*70)
     logger.info("Scheduled execution complete")
-    logger.info(f"Next run in 3 hours")
+    logger.info(f"Next run in 1 hour")
     logger.info("="*70)
     logger.info("")
 
@@ -68,7 +68,7 @@ def main():
     logger.info("🕐 CityPulse Data Refresh Scheduler")
     logger.info("="*70)
     logger.info("")
-    logger.info("Schedule: Every 3 hours")
+    logger.info("Schedule: Every 1 hour")
     logger.info("Mode: Parallel execution with caching")
     logger.info("Started at: " + datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     logger.info("")
@@ -80,8 +80,8 @@ def main():
     logger.info("Running initial data collection...")
     run_all_agents()
     
-    # Schedule to run every 3 hours
-    schedule.every(3).hours.do(run_all_agents)
+    # Schedule to run every 1 hour
+    schedule.every(1).hours.do(run_all_agents)
     
     # Keep running
     try:
